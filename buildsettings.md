@@ -203,7 +203,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Values        | * When `sdk=macosx`: `i386` |
 |               | * When `sdk=iphoneos`: `armv7` |
-|               | * When `sdk='iphonesimulator`: `i386` |
+|               | * When `sdk=iphonesimulator`: `i386` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 **$ARCHS_STANDARD_64_BIT**
@@ -215,7 +215,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Values        | * When `sdk=macosx`: `x86_64` |
 |               | * When `sdk=iphoneos`: `arm64` |
-|               | * When `sdk='iphonesimulator`: `x86_64` |
+|               | * When `sdk=iphonesimulator`: `x86_64` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 **$ARCHS_STANDARD_INCLUDING_64_BIT**
@@ -227,7 +227,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Values        | * When `sdk=macosx`: `x86_64` |
 |               | * When `sdk=iphoneos`: `arm64` |
-|               | * When `sdk='iphonesimulator`: `x86_64` |
+|               | * When `sdk=iphonesimulator`: `x86_64` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 **$ARCHS_UNIVERSAL_IPHONE_OS**
@@ -238,7 +238,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Type          | StringList |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Values        | * When `sdk=iphoneos`: `armv7 arm64` |
-|               | * When `sdk='iphonesimulator`: `i386 x86_64` |
+|               | * When `sdk=iphonesimulator`: `i386 x86_64` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 **$ASSETCATALOG_COMPILER_APPICON_NAME**
