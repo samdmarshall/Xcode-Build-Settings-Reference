@@ -2,10 +2,10 @@
 
 All variables are prefixed with "$" to uniquely identify them on this page. [Submitting updates to this page](https://github.com/samdmarshall/Xcode-Build-Settings-Reference).
 
-<!--export build setting types: `cat buildsettings.md | grep -E '^\|\ Type|^\*\*\$' | sed 's/\*\*//g' | sed 's/\| Type          \| //g' | sed 's/ \|//g' | sed 's/\$//g'`-->
-<!--pair lines: `awk 'NR%2{ORS=" ";print;next}{ORS="\n";print}'`-->
+<!--export build setting types: `cat buildsettings.md | grep -E '^\|\ Type|### \$' | sed 's/^### \$//g' | sed 's/\| Type *\| \(.*\) *\|/\1/g'`-->
+<!--pair lines: `paste - -` (or `paste -d ' ' - -` for separating by spaces) -->
 
-**$ACTION**
+### $ACTION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the type of build to perform on the target. |
@@ -23,7 +23,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ADDITIONAL_SDKS**
+### $ADDITIONAL_SDKS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The locations of any sparse SDKs that should be layered on top of the one specified by `$(SDKROOT)`. If more than |
@@ -35,7 +35,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ALTERNATE_GROUP**
+### $ALTERNATE_GROUP
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The group name or gid for the files listed under the `$(ALTERNATE_PERMISSIONS_FILES)` setting. |
@@ -45,7 +45,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(INSTALL_GROUP)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ALTERNATE_MODE**
+### $ALTERNATE_MODE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Permissions used for the the files listed under the `$(ALTERNATE_PERMISSIONS_FILES)` setting. |
@@ -55,7 +55,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(INSTALL_MODE_FLAG)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ALTERNATE_OWNER**
+### $ALTERNATE_OWNER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The owner name or uid for the files listed under the `$(ALTERNATE_PERMISSIONS_FILES)` setting. |
@@ -65,7 +65,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(INSTALL_OWNER)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ALTERNATE_PERMISSIONS_FILES**
+### $ALTERNATE_PERMISSIONS_FILES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | List of files to which the alternate owner, group and permissions are applied. |
@@ -75,7 +75,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ALWAYS_SEARCH_USER_PATHS**
+### $ALWAYS_SEARCH_USER_PATHS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether the compiler searches for headers in the project directory before searching system directories. |
@@ -88,7 +88,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$APPLE_INTERNAL_DEVELOPER_DIR**
+### $APPLE_INTERNAL_DEVELOPER_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -96,7 +96,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(APPLE_INTERNAL_DIR)/Developer` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$APPLE_INTERNAL_DIR**
+### $APPLE_INTERNAL_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -104,7 +104,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/AppleInternal` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$APPLE_INTERNAL_DOCUMENTATION_DIR**
+### $APPLE_INTERNAL_DOCUMENTATION_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -113,7 +113,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 
-**$APPLE_INTERNAL_LIBRARY_DIR**
+### $APPLE_INTERNAL_LIBRARY_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -121,7 +121,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(APPLE_INTERNAL_DIR)/Library` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$APPLE_INTERNAL_TOOLS**
+### $APPLE_INTERNAL_TOOLS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -129,7 +129,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(APPLE_INTERNAL_DEVELOPER_DIR)/Tools` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$APPLICATION_EXTENSION_API_ONLY**
+### $APPLICATION_EXTENSION_API_ONLY
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | When enabled, this causes the compiler and linker to disallow use of APIs that are not available to app |
@@ -141,7 +141,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$APPLY_RULES_IN_COPY_FILES**
+### $APPLY_RULES_IN_COPY_FILES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Files copied with a 'Copy Files Build Phase' are unchanged by default. |
@@ -154,7 +154,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ARCHS**
+### $ARCHS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of identifiers. Specifies the architectures (ABIs, processor models) to which the binary |
@@ -168,7 +168,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `x86_64` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ARCHS_STANDARD**
+### $ARCHS_STANDARD
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Standard Architectures. |
@@ -182,7 +182,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `$(ARCHS_STANDARD_INCLUDING_64_BIT)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ARCHS_STANDARD_32_64_BIT**
+### $ARCHS_STANDARD_32_64_BIT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Universal (32/64-bit) |
@@ -194,7 +194,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `i386 x86_64` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ARCHS_STANDARD_32_BIT**
+### $ARCHS_STANDARD_32_BIT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | 32-bit Architecture |
@@ -206,7 +206,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * When `sdk=iphonesimulator`: `i386` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ARCHS_STANDARD_64_BIT**
+### $ARCHS_STANDARD_64_BIT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | 64-bit Architecture |
@@ -218,7 +218,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * When `sdk=iphonesimulator`: `x86_64` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ARCHS_STANDARD_INCLUDING_64_BIT**
+### $ARCHS_STANDARD_INCLUDING_64_BIT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Standard Architectures, and 64-bit Architectures |
@@ -230,7 +230,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * When `sdk=iphonesimulator`: `x86_64` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ARCHS_UNIVERSAL_IPHONE_OS**
+### $ARCHS_UNIVERSAL_IPHONE_OS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Universal Architectures for iPhoneOS |
@@ -241,7 +241,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * When `sdk=iphonesimulator`: `i386 x86_64` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ASSETCATALOG_COMPILER_APPICON_NAME**
+### $ASSETCATALOG_COMPILER_APPICON_NAME
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Name of the asset catalog app icon set whose contents will be merged into the Info.plist. Passes flag `--app-icon`. |
@@ -251,7 +251,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME**
+### $ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Name of the asset catalog launch image set whose contents will be merged into the Info.plist.  Passes flag `--launch-image`. |
@@ -261,7 +261,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ASSETCATALOG_NOTICES**
+### $ASSETCATALOG_NOTICES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Show notices encountered during the compilation of asset catalogs. Passes flag `--notices`. |
@@ -271,7 +271,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ASSETCATALOG_OTHER_FLAGS**
+### $ASSETCATALOG_OTHER_FLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Pass additional flags through to the asset catalog compiler. |
@@ -281,7 +281,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ASSETCATALOG_WARNINGS**
+### $ASSETCATALOG_WARNINGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Show warnings encountered during the compilation of asset catalogs. Passes flag `--warnings`. |
@@ -291,7 +291,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$AVAILABLE_PLATFORMS**
+### $AVAILABLE_PLATFORMS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of platform bundles installed in Xcode's Developer directory. |
@@ -301,7 +301,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `iphonesimulator macosx iphoneos` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$BUILD_COMPONENTS**
+### $BUILD_COMPONENTS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of identifiers. Specifies subsets of the product. |
@@ -314,7 +314,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * When `$(ACTION)=installsrc`: empty |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$BUILD_DIR**
+### $BUILD_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Alias for `$(SYMROOT)`|
@@ -324,7 +324,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(SYMROOT)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$BUILD_ROOT**
+### $BUILD_ROOT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Alias for `$(SYMROOT)`|
@@ -334,7 +334,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(SYMROOT)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$BUILD_STYLE**
+### $BUILD_STYLE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Name of current build style. |
@@ -344,7 +344,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$BUILD_VARIANTS**
+### $BUILD_VARIANTS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of identifiers. Specifies the binary variants of the product. You can create additional |
@@ -360,7 +360,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `normal` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$BUILT_PRODUCTS_DIR**
+### $BUILT_PRODUCTS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the directory under which all the product’s files can be found. This directory contains either |
@@ -374,7 +374,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * Otherwise: `$(CONFIGURATION_BUILD_DIR)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$BUNDLE_LOADER**
+### $BUNDLE_LOADER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Passes flag `-bundle_loader` to the linker. |
@@ -384,7 +384,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CACHE_ROOT**
+### $CACHE_ROOT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Alias for `$(CCHROOT)`. |
@@ -396,7 +396,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/var/folders/m5/j4zdc7f9157659_pd5p0_n980000gn/C/com.apple.DeveloperTools/6.2-6C131e/Xcode` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CCHROOT**
+### $CCHROOT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The file used to cache build-time information that must persist between launches of the Xcode application. |
@@ -406,7 +406,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `confstr('CS_DARWIN_USER_CACHE_DIR')/com.apple.DeveloperTools/$(XCODE_PRODUCT_VERSION)-$(XCODE_PRODUCT_BUILD_VERSION)/Xcode'` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CHMOD**
+### $CHMOD
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to `chmod` tool. |
@@ -416,7 +416,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/bin/chmod` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CHOWN**
+### $CHOWN
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to `chown` tool. |
@@ -426,7 +426,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/usr/sbin/chown` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES**
+### $CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enabling this setting allows non-modular includes to be used from within framework modules. This is inherently |
@@ -441,7 +441,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_DEADCODE_DEADSTORES**
+### $CLANG_ANALYZER_DEADCODE_DEADSTORES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Check for values stored to variables that are never read afterwards. If disabled, passes flags: |
@@ -454,7 +454,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_GCD**
+### $CLANG_ANALYZER_GCD
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Check for misuses of Grand Central Dispatch API. If disabled, passes flags: |
@@ -467,7 +467,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_MALLOC**
+### $CLANG_ANALYZER_MALLOC
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | See `$(CLANG_ANALYZER_MEMORY_MANAGEMENT)`. |
@@ -477,7 +477,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_MEMORY_MANAGEMENT**
+### $CLANG_ANALYZER_MEMORY_MANAGEMENT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about memory leaks, use-after-free, as well as other API misuse. If disabled passes flags:  |
@@ -496,7 +496,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(CLANG_ANALYZER_MALLOC)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_OBJC_ATSYNC**
+### $CLANG_ANALYZER_OBJC_ATSYNC
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn on nil pointers used as mutexes for @synchronized. If disabled, passes flags: |
@@ -509,7 +509,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_OBJC_COLLECTIONS**
+### $CLANG_ANALYZER_OBJC_COLLECTIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn if CF collections are created with non-pointer-size values. Check if NS collections are initialized with |
@@ -527,7 +527,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES**
+### $CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about Objective-C method signatures with type incompatibilities. If disabled, passes flags: |
@@ -540,7 +540,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_OBJC_NSCFERROR**
+### $CLANG_ANALYZER_OBJC_NSCFERROR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn if functions accepting CFErrorRef or NSError cannot indicate if error occured. If disabled, passes flags: |
@@ -555,7 +555,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_OBJC_RETAIN_COUNT**
+### $CLANG_ANALYZER_OBJC_RETAIN_COUNT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn on leaks and improper reference count management. If disabled, passes flags: |
@@ -570,7 +570,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_OBJC_SELF_INIT**
+### $CLANG_ANALYZER_OBJC_SELF_INIT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Check that [super init] is properly called within an Objective-C initialization method. If disabled, passes flags: |
@@ -583,7 +583,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_OBJC_UNUSED_IVARS**
+### $CLANG_ANALYZER_OBJC_UNUSED_IVARS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about private ivars that are never used. If disabled, passes flags: |
@@ -596,7 +596,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER**
+### $CLANG_ANALYZER_SECURITY_FLOATLOOPCOUNTER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn on using a floating point value as a loop counter (CERT: FLP30-C, FLP30-CPP). If disabled, passes flags: |
@@ -609,7 +609,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_SECURITY_INSECUREAPI_GETPW_GETS**
+### $CLANG_ANALYZER_SECURITY_INSECUREAPI_GETPW_GETS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn on uses of 'getpw' and 'gets'. The functions are dangerous as they may trigger a buffer overflow. |
@@ -630,7 +630,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_SECURITY_INSECUREAPI_MKSTEMP**
+### $CLANG_ANALYZER_SECURITY_INSECUREAPI_MKSTEMP
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn on uses of 'mktemp', which produces predictable temporay files. It is obsoleted by 'mktemps'. Warn when |
@@ -652,7 +652,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND**
+### $CLANG_ANALYZER_SECURITY_INSECUREAPI_RAND
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn on uses of 'rand', 'random', and related functions which produce predictable random number sequences. |
@@ -670,7 +670,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY**
+### $CLANG_ANALYZER_SECURITY_INSECUREAPI_STRCPY
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn on uses of the 'strcpy' and 'strcat' functions, which can result in buffer overflows. Use 'strlcpy' or |
@@ -688,7 +688,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN**
+### $CLANG_ANALYZER_SECURITY_INSECUREAPI_UNCHECKEDRETURN
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn on uses of sensitive functions whose return values must be always checked. |
@@ -705,7 +705,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_SECURITY_INSECUREAPI_VFORK**
+### $CLANG_ANALYZER_SECURITY_INSECUREAPI_VFORK
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn on uses of the 'vfork' function, which is inherently insecure. Use the safer 'posix_spawn' function instead. |
@@ -722,7 +722,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ANALYZER_SECURITY_KEYCHAIN_API**
+### $CLANG_ANALYZER_SECURITY_KEYCHAIN_API
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Check for misuse of Keychain Services API. |
@@ -737,7 +737,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ARC_MIGRATE_DIR**
+### $CLANG_ARC_MIGRATE_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Passes flag `-ccc-arcmt-migrate`|
@@ -747,7 +747,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ARC_MIGRATE_EMIT_ERROR**
+### $CLANG_ARC_MIGRATE_EMIT_ERROR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If enabled, passes flag `-arcmt-migrate-emit-errors` |
@@ -757,7 +757,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ARC_MIGRATE_PRECHECK**
+### $CLANG_ARC_MIGRATE_PRECHECK
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Used by Xcode's migration tool, do not edit. |
@@ -770,7 +770,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `donothing` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ARC_MIGRATE_REPORT_OUTPUT**
+### $CLANG_ARC_MIGRATE_REPORT_OUTPUT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Passes flag `-arcmt-migrate-report-output` |
@@ -780,7 +780,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_COLOR_DIAGNOSTICS**
+### $CLANG_COLOR_DIAGNOSTICS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If enabled passes flag ` -fcolor-diagnostics`. Note: this flag does NOT impact PCH or compilation. The build |
@@ -791,7 +791,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(COLOR_DIAGNOSTICS)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_CXX_LANGUAGE_STANDARD**
+### $CLANG_CXX_LANGUAGE_STANDARD
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Choose a standard or non-standard C++ language dialect. |
@@ -810,7 +810,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `compiler-default` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_CXX_LIBRARY**
+### $CLANG_CXX_LIBRARY
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Choose a version of the C++ standard library to use. |
@@ -825,7 +825,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `compiler-default` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_DEBUG_INFORMATION_LEVEL**
+### $CLANG_DEBUG_INFORMATION_LEVEL
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Toggles the amount of debug information emitted when debug symbols are enabled.  This can impact the size of |
@@ -839,7 +839,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `default` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ENABLE_APP_EXTENSION**
+### $CLANG_ENABLE_APP_EXTENSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If enabled, passes flag `-fapplication-extension` |
@@ -849,7 +849,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(APPLICATION_EXTENSION_API_ONLY)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ENABLE_MODULES**
+### $CLANG_ENABLE_MODULES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If enabled, passes flag `-fmodules`. |
@@ -859,7 +859,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ENABLE_MODULE_IMPLEMENTATION_OF**
+### $CLANG_ENABLE_MODULE_IMPLEMENTATION_OF
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If enabled, passes flag `-fmodule-implementation-of $(PRODUCT_MODULE_NAME)` |
@@ -869,7 +869,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_ENABLE_OBJC_ARC**
+### $CLANG_ENABLE_OBJC_ARC
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If enabled, passes flag `-fobjc-arc`. |
@@ -879,7 +879,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_INSTRUMENT_FOR_OPTIMIZATION_PROFILING**
+### $CLANG_INSTRUMENT_FOR_OPTIMIZATION_PROFILING
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If enabled, passes flag `-fprofile-instr-generate` and `-fprofile-instr-generate` |
@@ -889,7 +889,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_LINK_OBJC_RUNTIME**
+### $CLANG_LINK_OBJC_RUNTIME
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If enabled, passes flag `-fobjc-link-runtime`. This option is passed for linking to inform the compiler that |
@@ -900,7 +900,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_MACRO_BACKTRACE_LIMIT**
+### $CLANG_MACRO_BACKTRACE_LIMIT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | `-fmacro-backtrace-limit=$(value)`|
@@ -910,7 +910,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `0` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_MODULES_AUTOLINK**
+### $CLANG_MODULES_AUTOLINK
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If disabled, passes flag `-fno-autolink`. |
@@ -920,7 +920,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_MODULES_IGNORE_MACROS**
+### $CLANG_MODULES_IGNORE_MACROS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If `$(CLANG_ENABLE_MODULES)` is enabled, passes flag `-fmodules-ignore-macro=$(value)`. |
@@ -930,7 +930,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_MODULES_VALIDATE_SYSTEM_HEADERS**
+### $CLANG_MODULES_VALIDATE_SYSTEM_HEADERS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If `$(CLANG_ENABLE_MODULES)` is enabled, if enabled passes flag `-fmodules-validate-system-headers`. |
@@ -940,7 +940,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_MODULES_VALIDATION_TIMESTAMP**
+### $CLANG_MODULES_VALIDATION_TIMESTAMP
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If not empty string: Passes flags `-fbuild-session-timestamp=$(value)` and `-fmodules-validate-once-per-build-session` |
@@ -950,7 +950,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_MODULE_CACHE_PATH**
+### $CLANG_MODULE_CACHE_PATH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Passes flag `-fmodules-cache-path=$(CLANG_MODULE_CACHE_PATH)` if `$(CLANG_ENABLE_MODULES)` is enabled. |
@@ -962,7 +962,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/Library/Developer/Xcode/DerivedData/ModuleCache` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_OBJC_MIGRATE_DIR**
+### $CLANG_OBJC_MIGRATE_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Passes flag `-ccc-objcmt-migrate` |
@@ -972,7 +972,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_OPTIMIZATION_PROFILE_FILE**
+### $CLANG_OPTIMIZATION_PROFILE_FILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The path to the file of the profile data to use when 'Use Optimization Profile' is enabled. |
@@ -984,7 +984,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/OptimizationProfiles/MyProject.profdata` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_RETAIN_COMMENTS_FROM_SYSTEM_HEADERS**
+### $CLANG_RETAIN_COMMENTS_FROM_SYSTEM_HEADERS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If enabled, passes flag `-fretain-comments-from-system-headers`. Note: this flag impacts PCH. |
@@ -994,7 +994,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_STATIC_ANALYZER_MODE**
+### $CLANG_STATIC_ANALYZER_MODE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The depth the static analyzer uses during the Build action. |
@@ -1009,7 +1009,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `shallow` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION**
+### $CLANG_STATIC_ANALYZER_MODE_ON_ANALYZE_ACTION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The depth the static analyzer uses during the Analyze action. |
@@ -1022,7 +1022,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `deep` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_USE_OPTIMIZATION_PROFILE**
+### $CLANG_USE_OPTIMIZATION_PROFILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | When this setting is enabled, clang will use the optimization profile collected for a target when building it. |
@@ -1034,7 +1034,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_ASSIGN_ENUM**
+### $CLANG_WARN_ASSIGN_ENUM
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about assigning integer constants to enum values that are out of the range of the enumerated type. If |
@@ -1045,7 +1045,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_BOOL_CONVERSION**
+### $CLANG_WARN_BOOL_CONVERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about implicit conversions to boolean values that are suspicious.  For example, writing 'if (foo)' with |
@@ -1059,7 +1059,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_CONSTANT_CONVERSION**
+### $CLANG_WARN_CONSTANT_CONVERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about implicit conversions of constant values that cause the constant value to change, either through a |
@@ -1073,7 +1073,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_CXX0X_EXTENSIONS**
+### $CLANG_WARN_CXX0X_EXTENSIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | When compiling C++ code using a language standard older than C++11, warn about the use of C++11 extensions. |
@@ -1086,7 +1086,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS**
+### $CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn if an Objective-C class either subclasses a deprecated class or overrides a method that has been marked deprecated. |
@@ -1099,7 +1099,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_DIRECT_OBJC_ISA_USAGE**
+### $CLANG_WARN_DIRECT_OBJC_ISA_USAGE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about direct accesses to the Objective-C 'isa' pointer instead of using a runtime API. |
@@ -1113,7 +1113,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES_ERROR` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_DOCUMENTATION_COMMENTS**
+### $CLANG_WARN_DOCUMENTATION_COMMENTS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warns about issues in documentation comments (doxygen-style) such as missing or incorrect documentation tags. |
@@ -1124,7 +1124,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_EMPTY_BODY**
+### $CLANG_WARN_EMPTY_BODY
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about loop bodies that are suspiciously empty. |
@@ -1137,7 +1137,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_ENUM_CONVERSION**
+### $CLANG_WARN_ENUM_CONVERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about implicit conversions between different kinds of enum values.  For example, this can catch issues |
@@ -1151,7 +1151,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_IMPLICIT_SIGN_CONVERSION**
+### $CLANG_WARN_IMPLICIT_SIGN_CONVERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about implicit integer conversions that change the signedness of an integer value. |
@@ -1164,7 +1164,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_INT_CONVERSION**
+### $CLANG_WARN_INT_CONVERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about implicit conversions between pointers and integers.  For example, this can catch issues when one |
@@ -1178,7 +1178,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE**
+### $CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If enabled, passes flag `-Wexplicit-ownership-type` |
@@ -1188,7 +1188,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES**
+### $CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about @property declarations that are implicitly atomic. |
@@ -1201,7 +1201,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF**
+### $CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about implicit retains of 'self' within blocks, which can create a retain-cycle. If enabled, passes flag |
@@ -1212,7 +1212,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS**
+### $CLANG_WARN_OBJC_MISSING_PROPERTY_SYNTHESIS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If enabled, passes flag `-Wobjc-missing-property-synthesis` |
@@ -1222,7 +1222,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_OBJC_RECEIVER_WEAK**
+### $CLANG_WARN_OBJC_RECEIVER_WEAK
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about sending messages to Objective-C pointers that are `__weak`. This aids in avoiding situations |
@@ -1237,7 +1237,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK**
+### $CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about repeatedly using a weak reference without assigning the weak reference to a strong reference. This |
@@ -1253,7 +1253,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_OBJC_ROOT_CLASS**
+### $CLANG_WARN_OBJC_ROOT_CLASS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about classes that unintentionally do not subclass a root class (such as NSObject). |
@@ -1267,7 +1267,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES_ERROR` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION**
+### $CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about various implicit conversions that can lose information or are otherwise suspicious. |
@@ -1280,7 +1280,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_UNREACHABLE_CODE**
+### $CLANG_WARN_UNREACHABLE_CODE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warns about potentially unreachable code. If enabled, passes flag `-Wunreachable-code` |
@@ -1290,7 +1290,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_\_ARC_BRIDGE_CAST_NONARC**
+### $CLANG_WARN_\_ARC_BRIDGE_CAST_NONARC
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If disabled, passes flag `-Wno-arc-bridge-casts-disallowed-in-nonarc` |
@@ -1300,7 +1300,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | YES |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_\_DUPLICATE_METHOD_MATCH**
+### $CLANG_WARN_\_DUPLICATE_METHOD_MATCH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about declaring the same method more than once within the same @interface. If enabled, passes flag `-Wduplicate-method-match` |
@@ -1310,7 +1310,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | YES |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_WARN_\_EXIT_TIME_DESTRUCTORS**
+### $CLANG_WARN_\_EXIT_TIME_DESTRUCTORS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about destructors for C++ objects that are called when an application is terminating. |
@@ -1323,7 +1323,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | NO |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CLANG_X86_VECTOR_INSTRUCTIONS**
+### $CLANG_X86_VECTOR_INSTRUCTIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enables the use of extended vector instructions. Only used when targeting Intel architectures. |
@@ -1344,7 +1344,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `default` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CODE_SIGN_ENTITLEMENTS**
+### $CODE_SIGN_ENTITLEMENTS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies the name of the application’s entitlements property-list file.  |
@@ -1356,7 +1356,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `Entitlements.plist` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CODE_SIGN_IDENTITY**
+### $CODE_SIGN_IDENTITY
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies the name of a code signing identity. |
@@ -1366,7 +1366,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `-` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CODE_SIGN_RESOURCE_RULES_PATH**
+### $CODE_SIGN_RESOURCE_RULES_PATH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies a property-list file containing resource-scanning instructions that override the rules for identifying bundle resources to sign. |
@@ -1378,7 +1378,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `ResourceRules.plist` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$COLOR_DIAGNOSTICS**
+### $COLOR_DIAGNOSTICS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -1386,7 +1386,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | NO |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$COMBINE_HIDPI_IMAGES**
+### $COMBINE_HIDPI_IMAGES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Combines image files at different resolutions into one multi-page TIFF file that is HiDPI compliant for Mac |
@@ -1398,7 +1398,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$COMPOSITE_SDK_DIRS**
+### $COMPOSITE_SDK_DIRS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to directory where Xcode creates a composited SDK of all SDKs used by a target. |
@@ -1410,7 +1410,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/var/folders/m5/j4zdc7f9157659_pd5p0_n980000gn/C/com.apple.DeveloperTools/6.2-6C131e/Xcode/CompositeSDKs` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$COMPRESS_PNG_FILES**
+### $COMPRESS_PNG_FILES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether to compress PNG files that are resources of the active target as they are copied to the |
@@ -1424,7 +1424,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CONFIGURATION**
+### $CONFIGURATION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the build configuration (for example, Debug or Release) the target uses to generate the product. |
@@ -1435,7 +1435,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * `Release` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CONFIGURATION_BUILD_DIR**
+### $CONFIGURATION_BUILD_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the directory under which all build-related files for the active build configuration are placed. |
@@ -1447,7 +1447,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/Debug` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CONFIGURATION_TEMP_DIR**
+### $CONFIGURATION_TEMP_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the directory that holds temporary files for the active build configuration. |
@@ -1459,7 +1459,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$COPYING_PRESERVES_HFS_DATA**
+### $COPYING_PRESERVES_HFS_DATA
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Passes flag `-preserve-hfs-data` |
@@ -1469,7 +1469,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$COPY_PHASE_STRIP**
+### $COPY_PHASE_STRIP
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Passes flag `-strip-debug-symbols` |
@@ -1479,7 +1479,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CP**
+### $CP
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to the `cp` tool. |
@@ -1489,7 +1489,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/bin/cp` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CPP_HEADERMAP_FILE**
+### $CPP_HEADERMAP_FILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1499,7 +1499,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build/MyProject.hmap` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CPP_HEADERMAP_FILE_FOR_ALL_NON_FRAMEWORK_TARGET_HEADERS**
+### $CPP_HEADERMAP_FILE_FOR_ALL_NON_FRAMEWORK_TARGET_HEADERS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1509,7 +1509,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build/MyProject-all-non-framework-target-headers.hmap` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CPP_HEADERMAP_FILE_FOR_ALL_TARGET_HEADERS**
+### $CPP_HEADERMAP_FILE_FOR_ALL_TARGET_HEADERS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1519,7 +1519,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build/MyProject-all-target-headers.hmap` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CPP_HEADERMAP_FILE_FOR_GENERATED_FILES**
+### $CPP_HEADERMAP_FILE_FOR_GENERATED_FILES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1529,7 +1529,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build/MyProject-generated-files.hmap` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CPP_HEADERMAP_FILE_FOR_OWN_TARGET_HEADERS**
+### $CPP_HEADERMAP_FILE_FOR_OWN_TARGET_HEADERS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1539,7 +1539,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build/MyProject-own-target-headers.hmap` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CPP_HEADERMAP_FILE_FOR_PROJECT_FILES**
+### $CPP_HEADERMAP_FILE_FOR_PROJECT_FILES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1549,7 +1549,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build/MyProject-project-headers.hmap` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CPP_HEADERMAP_PRODUCT_HEADERS_VFS_FILE**
+### $CPP_HEADERMAP_PRODUCT_HEADERS_VFS_FILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1559,7 +1559,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/all-product-headers.yaml` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CPP_HEADER_SYMLINKS_DIR**
+### $CPP_HEADER_SYMLINKS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1569,7 +1569,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build/MyProject.hdrs` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CREATE_INFOPLIST_SECTION_IN_BINARY**
+### $CREATE_INFOPLIST_SECTION_IN_BINARY
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If a section should be added to the Mach-O binary header for an embedded Info.plist |
@@ -1579,7 +1579,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CURRENT_ARCH**
+### $CURRENT_ARCH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the architecture on which the build is being performed. |
@@ -1589,7 +1589,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `x86_64` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CURRENT_PROJECT_VERSION**
+### $CURRENT_PROJECT_VERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This setting defines the the current version of the project. The value must be a integer or floating point |
@@ -1600,7 +1600,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$CURRENT_VARIANT**
+### $CURRENT_VARIANT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the build variant being processed. |
@@ -1611,7 +1611,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * Otherwise: `normal` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEAD_CODE_STRIPPING**
+### $DEAD_CODE_STRIPPING
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting causes the -dead_strip flag to be passed to ld(1) via cc(1) to turn on dead code |
@@ -1623,7 +1623,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEBUG_INFORMATION_FORMAT**
+### $DEBUG_INFORMATION_FORMAT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the format used to store the binary’s debug information. |
@@ -1636,7 +1636,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `dwarf` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEFAULT_COMPILER**
+### $DEFAULT_COMPILER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is assigned from the target platform. |
@@ -1646,7 +1646,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEFAULT_KEXT_INSTALL_PATH**
+### $DEFAULT_KEXT_INSTALL_PATH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This value is assigned by the target platform. |
@@ -1656,7 +1656,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(SYSTEM_KEXT_INSTALL_PATH)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEFAULT_SSE_LEVEL_3_NO**
+### $DEFAULT_SSE_LEVEL_3_NO
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
@@ -1664,7 +1664,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `default` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEFAULT_SSE_LEVEL_3_YES**
+### $DEFAULT_SSE_LEVEL_3_YES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
@@ -1672,7 +1672,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `sse3` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEFAULT_SSE_LEVEL_3_SUPPLEMENTAL_NO**
+### $DEFAULT_SSE_LEVEL_3_SUPPLEMENTAL_NO
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
@@ -1682,7 +1682,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `default` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEFAULT_SSE_LEVEL_3_SUPPLEMENTAL_YES**
+### $DEFAULT_SSE_LEVEL_3_SUPPLEMENTAL_YES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
@@ -1690,7 +1690,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `ssse3` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEFAULT_SSE_LEVEL_4_1_NO**
+### $DEFAULT_SSE_LEVEL_4_1_NO
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
@@ -1698,7 +1698,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(DEFAULT_SSE_LEVEL_3_SUPPLEMENTAL_$(GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS))` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEFAULT_SSE_LEVEL_4_1_YES**
+### $DEFAULT_SSE_LEVEL_4_1_YES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
@@ -1706,7 +1706,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `sse4.1` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEFAULT_SSE_LEVEL_4_2_NO**
+### $DEFAULT_SSE_LEVEL_4_2_NO
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
@@ -1714,7 +1714,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(DEFAULT_SSE_LEVEL_4_1_$(GCC_ENABLE_SSE41_EXTENSIONS))` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEFAULT_SSE_LEVEL_4_2_YES**
+### $DEFAULT_SSE_LEVEL_4_2_YES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
@@ -1722,7 +1722,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `sse4.2` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEFINES_MODULE**
+### $DEFINES_MODULE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If enabled, the product will be treated as defining its own module. This enables automatic production of LLVM |
@@ -1733,7 +1733,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEPLOYMENT_LOCATION**
+### $DEPLOYMENT_LOCATION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether product files are placed in the installation or the build directory. |
@@ -1747,7 +1747,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * Otherwise: `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEPLOYMENT_POSTPROCESSING**
+### $DEPLOYMENT_POSTPROCESSING
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether the binary receives deployment postprocessing. Deployment postprocessing involves stripping |
@@ -1762,7 +1762,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * `NO`: Is the alternative. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DERIVED_FILE_DIR**
+### $DERIVED_FILE_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the directory into which derived source files—such as those generated by lex and yacc—are placed. |
@@ -1772,7 +1772,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(TEMP_DIR)/DerivedSources` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DERIVED_FILES_DIR**
+### $DERIVED_FILES_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | See `$(DERIVED_FILE_DIR)` |
@@ -1782,7 +1782,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(DERIVED_FILE_DIR)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DERIVED_SOURCES_DIR**
+### $DERIVED_SOURCES_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | See `$(DERIVED_FILE_DIR)` |
@@ -1792,7 +1792,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(DERIVED_FILE_DIR)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEVELOPER_APPLICATIONS_DIR**
+### $DEVELOPER_APPLICATIONS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1802,7 +1802,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Applications` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEVELOPER_BIN_DIR**
+### $DEVELOPER_BIN_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1812,7 +1812,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/usr/bin` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEVELOPER_DIR**
+### $DEVELOPER_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1822,7 +1822,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEVELOPER_FRAMEWORKS_DIR**
+### $DEVELOPER_FRAMEWORKS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1832,7 +1832,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Library/Frameworks` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEVELOPER_FRAMEWORKS_DIR_QUOTED**
+### $DEVELOPER_FRAMEWORKS_DIR_QUOTED
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1842,7 +1842,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Library/Frameworks` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEVELOPER_LIBRARY_DIR**
+### $DEVELOPER_LIBRARY_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1852,7 +1852,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Library` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEVELOPER_SDK_DIR**
+### $DEVELOPER_SDK_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1862,7 +1862,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEVELOPER_TOOLS_DIR**
+### $DEVELOPER_TOOLS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1872,7 +1872,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Tools` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DEVELOPER_USR_DIR**
+### $DEVELOPER_USR_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -1882,7 +1882,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/usr` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DSTROOT**
+### $DSTROOT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the directory into which the product is placed. In this directory, the product is laid out exactly |
@@ -1895,7 +1895,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | /tmp/MyProject.dst |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DT_TOOLCHAIN_DIR**
+### $DT_TOOLCHAIN_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to default toolchain. |
@@ -1905,7 +1905,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DYLIB_COMPATIBILITY_VERSION**
+### $DYLIB_COMPATIBILITY_VERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies the compatibility version of a dynamic library product. See Dynamic Library Design Guidelines |
@@ -1916,7 +1916,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DYLIB_CURRENT_VERSION**
+### $DYLIB_CURRENT_VERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies the current version of a dynamic library product. See "Dynamic Library Design Guidelines" in Dynamic |
@@ -1927,7 +1927,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$DYLIB_INSTALL_NAME_BASE**
+### $DYLIB_INSTALL_NAME_BASE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Sets the base value for the internal "install path" `$(LC_ID_DYLIB)` in a dynamic library. This will be |
@@ -1940,7 +1940,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$EFFECTIVE_PLATFORM_NAME**
+### $EFFECTIVE_PLATFORM_NAME
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Name of target platform. |
@@ -1951,7 +1951,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * Otherwise: `-$(PLATFORM_NAME)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$EMBEDDED_CONTENT_CONTAINS_SWIFT**
+### $EMBEDDED_CONTENT_CONTAINS_SWIFT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enable this setting to indicate that content embedded in a target's product contains Swift code, so that the |
@@ -1962,7 +1962,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$EMBEDDED_PROFILE_NAME**
+### $EMBEDDED_PROFILE_NAME
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Name of the embedded provisioning profile file. |
@@ -1974,7 +1974,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `embedded.provisionprofile` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ENABLE_APPLE_KEXT_CODE_GENERATION**
+### $ENABLE_APPLE_KEXT_CODE_GENERATION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If enabled, passes flag `-fapple-kext` |
@@ -1984,7 +1984,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ENABLE_HEADER_DEPENDENCIES**
+### $ENABLE_HEADER_DEPENDENCIES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether data gathered from header-file scans is used in the build process. |
@@ -1997,7 +1997,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ENABLE_NS_ASSERTIONS**
+### $ENABLE_NS_ASSERTIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Controls whether assertion logic provided by NSAssert is included in the preprocessed source code or is elided |
@@ -2008,7 +2008,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ENABLE_STRICT_OBJC_MSGSEND**
+### $ENABLE_STRICT_OBJC_MSGSEND
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Controls whether objc_msgSend calls must be cast to the appropriate function pointer type before being called. |
@@ -2019,7 +2019,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS**
+### $EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | String-separated list of subdirectories to exclude. |
@@ -2029,7 +2029,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `.DS_Store .svn .git .hg CVS` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES**
+### $EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | String-separated list of subdirectories to exclude. |
@@ -2039,7 +2039,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `*.nib *.lproj *.framework *.gch *.xcode* (*) .DS_Store CVS .svn .git .hg` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$EXECUTABLE_EXTENSION**
+### $EXECUTABLE_EXTENSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is the extension used for the executable product generated by the target, which has a default value based on the product type. |
@@ -2049,7 +2049,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$EXECUTABLE_PREFIX**
+### $EXECUTABLE_PREFIX
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is the prefix used for the executable product generated by the target, which has a default value based on the product type. |
@@ -2059,7 +2059,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$EXECUTABLE_SUFFIX**
+### $EXECUTABLE_SUFFIX
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is the suffix used for the executable product generated by the target, which has a default value based on the product type. |
@@ -2069,7 +2069,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$EXECUTABLE_VARIANT_SUFFIX**
+### $EXECUTABLE_VARIANT_SUFFIX
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is the suffix (based on `$(CURRENT_VARIANT)`) used for the executable product generated by the target, |
@@ -2080,7 +2080,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$EXPORTED_SYMBOLS_FILE**
+### $EXPORTED_SYMBOLS_FILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is a project-relative path to a file that lists the symbols to export. Passes flag `-exported_symbols_list` |
@@ -2090,7 +2090,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$FILE_LIST**
+### $FILE_LIST
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -2100,7 +2100,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build/Objects/LinkFileList` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$FRAMEWORK_SEARCH_PATHS**
+### $FRAMEWORK_SEARCH_PATHS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of directory paths. Specifies directories in which the compiler searches for frameworks |
@@ -2115,7 +2115,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * `/Volumes/Auryon/TeamFrameworks/**` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$FRAMEWORK_VERSION**
+### $FRAMEWORK_VERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Version identifier of a framework. |
@@ -2125,7 +2125,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `A` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC3_VERSION**
+### $GCC3_VERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | GCC version. |
@@ -2135,7 +2135,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `3.3` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_CHAR_IS_UNSIGNED_CHAR**
+### $GCC_CHAR_IS_UNSIGNED_CHAR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enabling this setting causes 'char' to be unsigned by default, disabling it causes 'char' to be signed by default. |
@@ -2146,7 +2146,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_CW_ASM_SYNTAX**
+### $GCC_CW_ASM_SYNTAX
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enable the CodeWarrior/Microsoft syntax for inline assembly code in addition to the standard GCC syntax. |
@@ -2159,7 +2159,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_C_LANGUAGE_STANDARD**
+### $GCC_C_LANGUAGE_STANDARD
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Choose a standard or non-standard C language dialect. |
@@ -2181,7 +2181,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `compiler-default` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_DEBUG_INFORMATION_FORMAT**
+### $GCC_DEBUG_INFORMATION_FORMAT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Debug information file format. |
@@ -2195,7 +2195,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(DEBUG_INFORMATION_FORMAT)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_DYNAMIC_NO_PIC**
+### $GCC_DYNAMIC_NO_PIC
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Faster function calls for applications. Not appropriate for shared libraries (which need to be position-independent). |
@@ -2208,7 +2208,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_ASM_KEYWORD**
+### $GCC_ENABLE_ASM_KEYWORD
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Controls whether 'asm', 'inline', and 'typeof' are treated as keywords or whether they can be used as |
@@ -2219,7 +2219,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_BUILTIN_FUNCTIONS**
+### $GCC_ENABLE_BUILTIN_FUNCTIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Controls whether built-in functions that do not begin with `__builtin_` as prefix are recognized. GCC normally |
@@ -2238,7 +2238,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_CPP_EXCEPTIONS**
+### $GCC_ENABLE_CPP_EXCEPTIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enable C++ exception handling.  Generates extra code needed to propagate exceptions.  For some targets, this |
@@ -2256,7 +2256,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_CPP_RTTI**
+### $GCC_ENABLE_CPP_RTTI
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enable generation of information about every class with virtual functions for use by the C++ runtime type |
@@ -2272,7 +2272,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_EXCEPTIONS**
+### $GCC_ENABLE_EXCEPTIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enable exception handling.  Generates extra code needed to propagate exceptions.  For some targets, this |
@@ -2289,7 +2289,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS**
+### $GCC_ENABLE_FLOATING_POINT_LIBRARY_CALLS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Generate output containing library calls for floating point. If enabled, passes flag `-msoft-float` |
@@ -2299,7 +2299,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_KERNEL_DEVELOPMENT**
+### $GCC_ENABLE_KERNEL_DEVELOPMENT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting enables kernel development mode.  This mode sets `-static`, `-fno-common`, `-fno-cxa-atexit`, |
@@ -2312,7 +2312,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_OBJC_EXCEPTIONS**
+### $GCC_ENABLE_OBJC_EXCEPTIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This setting enables @try/@catch/@throw syntax for handling exceptions in Objective-C code. Specifies whether |
@@ -2326,7 +2326,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_OBJC_GC**
+### $GCC_ENABLE_OBJC_GC
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies the level of garbage-collection support for the generated code. |
@@ -2343,7 +2343,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `unsupported` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_PASCAL_STRINGS**
+### $GCC_ENABLE_PASCAL_STRINGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Recognize and construct Pascal-style string literals. Its use in new code is discouraged. Pascal string |
@@ -2357,7 +2357,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_SSE3_EXTENSIONS**
+### $GCC_ENABLE_SSE3_EXTENSIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether the binary uses the built-in functions that provide access to the SSE3 extensions to the |
@@ -2372,7 +2372,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_SSE41_EXTENSIONS**
+### $GCC_ENABLE_SSE41_EXTENSIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether the binary uses the built-in functions that provide access to the SSE4.1 extensions to the |
@@ -2387,7 +2387,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_SSE42_EXTENSIONS**
+### $GCC_ENABLE_SSE42_EXTENSIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether the binary uses the built-in functions that provide access to the SSE4.2 extensions to the |
@@ -2402,7 +2402,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS**
+### $GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Old build setting. Kept around for old project compatibility. Forwards to `$(CLANG_X86_VECTOR_INSTRUCTIONS)`. |
@@ -2412,7 +2412,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_ENABLE_TRIGRAPHS**
+### $GCC_ENABLE_TRIGRAPHS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Controls whether or not trigraphs are permitted in the source code. |
@@ -2425,7 +2425,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_FAST_MATH**
+### $GCC_FAST_MATH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enables some floating point optimizations that are not IEEE754-compliant, but which usually work. Programs |
@@ -2436,7 +2436,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_GENERATE_DEBUGGING_SYMBOLS**
+### $GCC_GENERATE_DEBUGGING_SYMBOLS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enables or disables generation of debug symbols. When debug symbols are enabled, the level of detail can be |
@@ -2450,7 +2450,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_GENERATE_TEST_COVERAGE_FILES**
+### $GCC_GENERATE_TEST_COVERAGE_FILES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting causes a 'notes' file to be produced that the gcov code-coverage utility can use to |
@@ -2461,7 +2461,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_INCREASE_PRECOMPILED_HEADER_SHARING**
+### $GCC_INCREASE_PRECOMPILED_HEADER_SHARING
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enabling this option will enable increased sharing of precompiled headers among targets which share the same |
@@ -2479,7 +2479,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_INLINES_ARE_PRIVATE_EXTERN**
+### $GCC_INLINES_ARE_PRIVATE_EXTERN
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | When enabled, out-of-line copies of inline methods are declared `private extern`. If enabled, passes |
@@ -2490,7 +2490,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_INPUT_FILETYPE**
+### $GCC_INPUT_FILETYPE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether to compile each source file according to its file type, or whether to treat all source files |
@@ -2507,7 +2507,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `automatic` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_INSTRUMENT_PROGRAM_FLOW_ARCS**
+### $GCC_INSTRUMENT_PROGRAM_FLOW_ARCS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting indicates that code should be added so program flow arcs are instrumented. If enabled, |
@@ -2518,7 +2518,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_LINK_WITH_DYNAMIC_LIBRARIES**
+### $GCC_LINK_WITH_DYNAMIC_LIBRARIES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enabling this option allows linking with the shared libraries. This is the default for most product types. If |
@@ -2529,7 +2529,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_MACOSX_VERSION_MIN**
+### $GCC_MACOSX_VERSION_MIN
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Sets the minimum deployment version for OS X. Passes flag `-mmacosx-version-min=$(value)` |
@@ -2539,7 +2539,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(MACOSX_DEPLOYMENT_TARGET)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_NO_COMMON_BLOCKS**
+### $GCC_NO_COMMON_BLOCKS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | In C, allocate even uninitialized global variables in the data section of the object file, rather than |
@@ -2553,7 +2553,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_OBJC_ABI_VERSION**
+### $GCC_OBJC_ABI_VERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Used by iPhoneSimulator to specify the ObjC runtime for architecture. Passes flag `-fobjc-abi-version=$(value)` |
@@ -2566,7 +2566,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(OBJC_ABI_VERSION)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_OBJC_LEGACY_DISPATCH**
+### $GCC_OBJC_LEGACY_DISPATCH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Used by iPhoneSimulator to specify the ObjC runtime for architecture. Passes flag `-fobjc-legacy-dispatch` |
@@ -2576,7 +2576,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_OPERATION**
+### $GCC_OPERATION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Old build setting. |
@@ -2592,7 +2592,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `compile` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_OPTIMIZATION_LEVEL**
+### $GCC_OPTIMIZATION_LEVEL
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies the degree to which the generated code is optimized for speed and binary size. Passes flag `-O$(value)` |
@@ -2622,7 +2622,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `s` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_PFE_FILE_C_DIALECTS**
+### $GCC_PFE_FILE_C_DIALECTS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of supported C dialect files. |
@@ -2632,7 +2632,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `c objective-c c++ objective-c++` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_PRECOMPILE_PREFIX_HEADER**
+### $GCC_PRECOMPILE_PREFIX_HEADER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Generates a precompiled header for the prefix header, which should reduce overall build times. |
@@ -2645,7 +2645,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(PRECOMPILE_PREFIX_HEADER)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_PREFIX_HEADER**
+### $GCC_PREFIX_HEADER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Implicitly include the named header. The path given should either be a project relative path or an absolute path. |
@@ -2657,7 +2657,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `MyProduct_Prefix.pch` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_PREPROCESSOR_DEFINITIONS**
+### $GCC_PREPROCESSOR_DEFINITIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of preprocessor macros of the form "foo" or "foo=bar". Each element is passed with flag `-D` |
@@ -2668,7 +2668,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * Otherwise: empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS**
+### $GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of preprocessor macros of the form "foo" or "foo=bar". These macros are not used when |
@@ -2679,7 +2679,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_PRODUCT_TYPE_PREPROCESSOR_DEFINITIONS**
+### $GCC_PRODUCT_TYPE_PREPROCESSOR_DEFINITIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | See `$(GCC_PREPROCESSOR_DEFINITIONS)`. |
@@ -2689,7 +2689,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_REUSE_STRINGS**
+### $GCC_REUSE_STRINGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Reuse string literals. If disabled, passes flag `-fwritable-strings` |
@@ -2699,7 +2699,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_SHORT_ENUMS**
+### $GCC_SHORT_ENUMS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Make enums only as large as needed for the range of possible values. If enabled, passes flag `-fshort-enums` |
@@ -2709,7 +2709,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_STRICT_ALIASING**
+### $GCC_STRICT_ALIASING
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Optimize code by making more aggressive assumptions about whether pointers can point to the same objects as |
@@ -2724,7 +2724,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_SYMBOLS_PRIVATE_EXTERN**
+### $GCC_SYMBOLS_PRIVATE_EXTERN
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | When enabled, all symbols are declared `private extern` unless explicitly marked to be exported using |
@@ -2740,7 +2740,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_THREADSAFE_STATICS**
+### $GCC_THREADSAFE_STATICS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Emits extra code to use the routines specified in the C++ ABI for thread-safe initialization of local statics. |
@@ -2754,7 +2754,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS**
+### $GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Causes warnings about missing function prototypes to be treated as errors. Only applies to C and Objective-C. |
@@ -2765,7 +2765,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS**
+### $GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enabling this option causes warnings about incompatible pointer types to be treated as errors. If enabled, |
@@ -2776,7 +2776,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_TREAT_WARNINGS_AS_ERRORS**
+### $GCC_TREAT_WARNINGS_AS_ERRORS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enabling this option causes all warnings to be treated as errors. If enabled, passes flag `"-Werror` |
@@ -2786,7 +2786,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_UNROLL_LOOPS**
+### $GCC_UNROLL_LOOPS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Unrolls loops. Unrolling makes the code larger, but may make it faster by reducing the number of branches executed. |
@@ -2799,7 +2799,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_USE_GCC3_PFE_SUPPORT**
+### $GCC_USE_GCC3_PFE_SUPPORT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Used by GCC 3.1 and later only. |
@@ -2809,7 +2809,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_USE_STANDARD_INCLUDE_SEARCHING**
+### $GCC_USE_STANDARD_INCLUDE_SEARCHING
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If disabled, passes flag `-nostdinc`. |
@@ -2819,7 +2819,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_VERSION**
+### $GCC_VERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   |  Identifies the GCC version to be used to compile the target’s source files. When the target's "System C rule" |
@@ -2831,7 +2831,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_64_TO_32_BIT_CONVERSION**
+### $GCC_WARN_64_TO_32_BIT_CONVERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn if a value is implicitly converted from a 64 bit type to a 32 bit type. This is a subset of the warnings |
@@ -2845,7 +2845,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS**
+### $GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about the use of deprecated functions, variables, and types (as indicated by the 'deprecated' attribute). |
@@ -2858,7 +2858,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO**
+### $GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Unchecking this setting will suppress warnings from applying the offsetof macro to a non-POD type. According |
@@ -2876,7 +2876,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS**
+### $GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn if a structure's initializer has some fields missing.  For example, the following code would cause such a |
@@ -2899,7 +2899,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_ABOUT_MISSING_NEWLINE**
+### $GCC_WARN_ABOUT_MISSING_NEWLINE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn when a source file does not end with a newline. |
@@ -2912,7 +2912,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_ABOUT_MISSING_PROTOTYPES**
+### $GCC_WARN_ABOUT_MISSING_PROTOTYPES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Causes warnings to be emitted about missing prototypes. |
@@ -2925,7 +2925,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_ABOUT_POINTER_SIGNEDNESS**
+### $GCC_WARN_ABOUT_POINTER_SIGNEDNESS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn when pointers passed via arguments or assigned to a variable differ in sign. |
@@ -2938,7 +2938,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_ABOUT_RETURN_TYPE**
+### $GCC_WARN_ABOUT_RETURN_TYPE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Causes warnings to be emitted when a function with a defined return type (not void) contains a return statement |
@@ -2953,7 +2953,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES_ERROR` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL**
+### $GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn if methods required by a protocol are not implemented in the class adopting it. Only applies to Objective-C. |
@@ -2966,7 +2966,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_CHECK_SWITCH_STATEMENTS**
+### $GCC_WARN_CHECK_SWITCH_STATEMENTS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn whenever a switch statement has an index of enumeral type and lacks a case for one or more of the named |
@@ -2981,7 +2981,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_FOUR_CHARACTER_CONSTANTS**
+### $GCC_WARN_FOUR_CHARACTER_CONSTANTS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn about four-char literals (e.g., MacOS-style OSTypes: 'APPL'). |
@@ -2994,7 +2994,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS**
+### $GCC_WARN_HIDDEN_VIRTUAL_FUNCTIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn when a function declaration hides virtual functions from a base class. For example, in:
@@ -3022,7 +3022,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_INHIBIT_ALL_WARNINGS**
+### $GCC_WARN_INHIBIT_ALL_WARNINGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Inhibit all warning messages. If enabled, passes flag `-w` |
@@ -3032,7 +3032,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED**
+### $GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn if an aggregate or union initializer is not fully bracketed.
@@ -3051,7 +3051,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_MISSING_PARENTHESES**
+### $GCC_WARN_MISSING_PARENTHESES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn if parentheses are omitted in certain contexts, such as when there is an assignment in a context where a |
@@ -3093,7 +3093,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR**
+### $GCC_WARN_MULTIPLE_DEFINITION_TYPES_FOR_SELECTOR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn if multiple methods of different types for the same selector are found during compilation. The check is |
@@ -3111,7 +3111,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_NON_VIRTUAL_DESTRUCTOR**
+### $GCC_WARN_NON_VIRTUAL_DESTRUCTOR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn when a class declares an nonvirtual destructor that should probably be virtual, because it looks like the |
@@ -3125,7 +3125,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_PEDANTIC**
+### $GCC_WARN_PEDANTIC
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Issue all the warnings demanded by strict ISO C and ISO C++; reject all programs that use forbidden extensions, |
@@ -3137,7 +3137,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_SHADOW**
+### $GCC_WARN_SHADOW
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn whenever a local variable shadows another local variable, parameter or global variable or whenever a |
@@ -3151,7 +3151,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_SIGN_COMPARE**
+### $GCC_WARN_SIGN_COMPARE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn when a comparison between signed and unsigned values could produce an incorrect result when the signed |
@@ -3162,7 +3162,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_STRICT_SELECTOR_MATCH**
+### $GCC_WARN_STRICT_SELECTOR_MATCH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn if multiple methods with differing argument and/or return types are found for a given selector when |
@@ -3178,7 +3178,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_TYPECHECK_CALLS_TO_PRINTF**
+### $GCC_WARN_TYPECHECK_CALLS_TO_PRINTF
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Check calls to printf and scanf, etc., to make sure that the arguments supplied have types appropriate to the |
@@ -3190,7 +3190,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_UNDECLARED_SELECTOR**
+### $GCC_WARN_UNDECLARED_SELECTOR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn if a `@selector(...)` expression referring to an undeclared selector is found. A selector is considered |
@@ -3208,7 +3208,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_UNINITIALIZED_AUTOS**
+### $GCC_WARN_UNINITIALIZED_AUTOS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn if a variable might be clobbered by a setjmp call or if an automatic variable is used without prior |
@@ -3226,7 +3226,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_UNKNOWN_PRAGMAS**
+### $GCC_WARN_UNKNOWN_PRAGMAS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn when a `#pragma` directive is encountered which is not understood by GCC. If this command line option is |
@@ -3241,7 +3241,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_UNUSED_FUNCTION**
+### $GCC_WARN_UNUSED_FUNCTION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn whenever a static function is declared but not defined or a non-inline static function is unused. |
@@ -3254,7 +3254,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_UNUSED_LABEL**
+### $GCC_WARN_UNUSED_LABEL
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn whenever a label is declared but not used. |
@@ -3267,7 +3267,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_UNUSED_PARAMETER**
+### $GCC_WARN_UNUSED_PARAMETER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn whenever a function parameter is unused aside from its declaration. |
@@ -3280,7 +3280,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_UNUSED_VALUE**
+### $GCC_WARN_UNUSED_VALUE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn whenever a statement computes a result that is explicitly not used. |
@@ -3293,7 +3293,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GCC_WARN_UNUSED_VARIABLE**
+### $GCC_WARN_UNUSED_VARIABLE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Warn whenever a local variable or non-constant static variable is unused aside from its declaration. |
@@ -3306,7 +3306,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GENERATE_MASTER_OBJECT_FILE**
+### $GENERATE_MASTER_OBJECT_FILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting will cause the object files built by a target to be prelinked using `ld -r` into a |
@@ -3320,7 +3320,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GENERATE_PKGINFO_FILE**
+### $GENERATE_PKGINFO_FILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether to generate the product's package information file. |
@@ -3334,7 +3334,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * `NO`: In other target types. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GENERATE_PROFILING_CODE**
+### $GENERATE_PROFILING_CODE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting will cause the compiler and linker to generate profiling code. E.g., GCC will |
@@ -3345,7 +3345,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GID**
+### $GID
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Group id of the current user. |
@@ -3355,7 +3355,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `id -g` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$GROUP**
+### $GROUP
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Group name of the current user. |
@@ -3367,7 +3367,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | staff |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$HEADERMAP_FILE_FORMAT**
+### $HEADERMAP_FILE_FORMAT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Header map file format. |
@@ -3380,7 +3380,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `traditional` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT**
+### $HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether the header map contains a name/path entry for every header in the target being built. |
@@ -3393,7 +3393,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES**
+### $HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether the header map contains a framework-name/path entry for every header in the target being |
@@ -3407,7 +3407,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS**
+### $HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies if the header map contains non-public and non-private headers. |
@@ -3417,7 +3417,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(HEADERMAP_INCLUDES_PROJECT_HEADERS)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$HEADERMAP_INCLUDES_PROJECT_HEADERS**
+### $HEADERMAP_INCLUDES_PROJECT_HEADERS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether the header map contains a name/path entry for every header in the project, regardless of the |
@@ -3432,7 +3432,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 
-**$HEADERMAP_USES_FRAMEWORK_PREFIX_ENTRIES**
+### $HEADERMAP_USES_FRAMEWORK_PREFIX_ENTRIES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -3440,7 +3440,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$HEADERMAP_USES_VFS**
+### $HEADERMAP_USES_VFS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -3448,7 +3448,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(DEFINES_MODULE)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$HEADER_SEARCH_PATHS**
+### $HEADER_SEARCH_PATHS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of directory paths. Specifies directories in which to search for header files. (In GCC, |
@@ -3462,7 +3462,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$IBC_COMPILER_AUTO_ACTIVATE_CUSTOM_FONTS**
+### $IBC_COMPILER_AUTO_ACTIVATE_CUSTOM_FONTS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Instructs the XIB compiler to add custom fonts to the application's Info.plist which will cause the fonts to |
@@ -3473,7 +3473,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$IBC_ERRORS**
+### $IBC_ERRORS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Show errors encountered during the compilation of XIB files. Passes flag `--errors` |
@@ -3483,7 +3483,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$IBC_FLATTEN_NIBS**
+### $IBC_FLATTEN_NIBS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Compiles a XIB file into flattened (non-wrapper) NIB file. After flattening, the resulting NIB is more compact |
@@ -3495,7 +3495,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$IBC_NOTICES**
+### $IBC_NOTICES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Show notices encountered during the compilation of XIB files. Passes flag `--notices` |
@@ -3505,7 +3505,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$IBC_OTHER_FLAGS**
+### $IBC_OTHER_FLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | A list of additional flags to pass to the Interface Builder Compiler. Use this setting if Xcode does not |
@@ -3516,7 +3516,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$IBC_WARNINGS**
+### $IBC_WARNINGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Show warnings encountered during the compilation of XIB files. Passes flag `--warnings` |
@@ -3526,7 +3526,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ICONV**
+### $ICONV
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to `iconv` tool. |
@@ -3536,7 +3536,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/usr/bin/iconv` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES**
+### $INCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is a list of fnmatch()-style patterns of file or directory names to include when performing a recursive |
@@ -3548,7 +3548,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INFOPLIST_EXPAND_BUILD_SETTINGS**
+### $INFOPLIST_EXPAND_BUILD_SETTINGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Expand build settings in the Info.plist file. |
@@ -3558,7 +3558,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INFOPLIST_FILE**
+### $INFOPLIST_FILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is the project-relative path to the plist file that contains the Info.plist information used by bundles. |
@@ -3568,7 +3568,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INFOPLIST_OTHER_PREPROCESSOR_FLAGS**
+### $INFOPLIST_OTHER_PREPROCESSOR_FLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Other flags to pass to the C preprocessor when preprocessing the Info.plist file. |
@@ -3578,7 +3578,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INFOPLIST_OUTPUT_FORMAT**
+### $INFOPLIST_OUTPUT_FORMAT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies the output encoding for the output Info.plist (by default, the output encoding will be unchanged |
@@ -3593,7 +3593,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `same-as-input` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INFOPLIST_PREFIX_HEADER**
+### $INFOPLIST_PREFIX_HEADER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Implicitly include the given file when preprocessing the Info.plist file. The path given should either be a |
@@ -3604,7 +3604,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INFOPLIST_PREPROCESS**
+### $INFOPLIST_PREPROCESS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Preprocess the Info.plist file using the C Preprocessor. |
@@ -3614,7 +3614,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INFOPLIST_PREPROCESSOR_DEFINITIONS**
+### $INFOPLIST_PREPROCESSOR_DEFINITIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of preprocessor macros of the form "foo" or "foo=bar". These macros are used when |
@@ -3625,7 +3625,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INIT_ROUTINE**
+### $INIT_ROUTINE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is the name of the routine to use for initialization. |
@@ -3635,7 +3635,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INSTALL_DIR**
+### $INSTALL_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the directory in the developer’s filesystem into which the installed product is placed. |
@@ -3645,7 +3645,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(DSTROOT)$(INSTALL_PATH)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INSTALL_GROUP**
+### $INSTALL_GROUP
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The group name or gid for installed products. |
@@ -3657,7 +3657,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `staff` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INSTALL_MODE_FLAG**
+### $INSTALL_MODE_FLAG
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Permissions used for installed product files. |
@@ -3667,7 +3667,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `u+w,go-w,a+rX` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INSTALL_OWNER**
+### $INSTALL_OWNER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The owner name or uid for installed products. |
@@ -3679,7 +3679,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `genica` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INSTALL_PATH**
+### $INSTALL_PATH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the directory in the user’s filesystem into which the installed product is placed. |
@@ -3697,7 +3697,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$INSTALL_ROOT**
+### $INSTALL_ROOT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Alias to `$(DSTROOT)` |
@@ -3707,7 +3707,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(DSTROOT)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$IPHONEOS_DEPLOYMENT_TARGET**
+### $IPHONEOS_DEPLOYMENT_TARGET
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Code will load on this and later versions of iOS. Framework APIs that are unavailable in earlier versions |
@@ -3719,7 +3719,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `8.2` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$JAVAC_DEFAULT_FLAGS**
+### $JAVAC_DEFAULT_FLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Default javac flags |
@@ -3729,7 +3729,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `-J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$JAVA_APP_STUB**
+### $JAVA_APP_STUB
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -3738,7 +3738,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 
-**$JAVA_ARCHIVE_CLASSES**
+### $JAVA_ARCHIVE_CLASSES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -3746,7 +3746,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$JAVA_ARCHIVE_TYPE**
+### $JAVA_ARCHIVE_TYPE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Enumeration |
@@ -3756,7 +3756,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `JAR` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$JAVA_COMPILER**
+### $JAVA_COMPILER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to `javac` tool. |
@@ -3766,7 +3766,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/usr/bin/javac` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$JAVA_FRAMEWORK_RESOURCES_DIRS**
+### $JAVA_FRAMEWORK_RESOURCES_DIRS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | PathList |
@@ -3774,7 +3774,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `Resources` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$JAVA_JAR_FLAGS**
+### $JAVA_JAR_FLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | StringList |
@@ -3782,7 +3782,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `cv` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$JAVA_SOURCE_SUBDIR**
+### $JAVA_SOURCE_SUBDIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -3790,7 +3790,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `.` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$JAVA_USE_DEPENDENCIES**
+### $JAVA_USE_DEPENDENCIES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -3798,7 +3798,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$JAVA_ZIP_FLAGS**
+### $JAVA_ZIP_FLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | StringList |
@@ -3806,7 +3806,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `-urg` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$KEEP_PRIVATE_EXTERNS**
+### $KEEP_PRIVATE_EXTERNS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting will preserve private external symbols rather than turning them into static symbols. |
@@ -3817,7 +3817,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LD_DEPENDENCY_INFO_FILE**
+### $LD_DEPENDENCY_INFO_FILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This setting defines the path to which the linker should emit information about what files it used as inputs |
@@ -3831,7 +3831,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build/Objects-normal/x86_64/MyProject_dependency_info.dat` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LD_DYLIB_INSTALL_NAME**
+### $LD_DYLIB_INSTALL_NAME
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Sets an internal "install path" `$(LC_ID_DYLIB)` in a dynamic library. Any clients linked against the library |
@@ -3844,7 +3844,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LD_GENERATE_MAP_FILE**
+### $LD_GENERATE_MAP_FILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting will cause the linker to write a map file to disk which details all symbols and their |
@@ -3858,7 +3858,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LD_MAP_FILE_PATH**
+### $LD_MAP_FILE_PATH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This setting defines the path to the map file written by the linker when the Write Link Map File setting is |
@@ -3872,7 +3872,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build/MyProject-LinkMap-normal-x86_64.txt` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LD_NO_PIE**
+### $LD_NO_PIE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting will cause Xcode to not create position independent executables. If enabled, passes flag |
@@ -3883,7 +3883,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER**
+### $LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This setting controls whether arguments to the linker should be 'quoted' using `-Xlinker`. By default Xcode |
@@ -3899,7 +3899,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LD_RUNPATH_SEARCH_PATHS**
+### $LD_RUNPATH_SEARCH_PATHS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is a list of paths to be added to the runpath search path list for the image being created.  At runtime, |
@@ -3912,7 +3912,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LEGACY_DEVELOPER_DIR**
+### $LEGACY_DEVELOPER_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -3922,7 +3922,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LEX**
+### $LEX
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to `lex` tool. |
@@ -3932,7 +3932,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `lex` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LEXFLAGS**
+### $LEXFLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of flags to pass to lex |
@@ -3942,7 +3942,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LIBRARY_FLAG_NOSPACE**
+### $LIBRARY_FLAG_NOSPACE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | No space between the library flag and the library name. |
@@ -3952,7 +3952,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LIBRARY_FLAG_PREFIX**
+### $LIBRARY_FLAG_PREFIX
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Prefix for passing libraries. |
@@ -3962,7 +3962,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `-l` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LIBRARY_KEXT_INSTALL_PATH**
+### $LIBRARY_KEXT_INSTALL_PATH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -3970,7 +3970,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(LOCAL_LIBRARY_DIR)/Extensions` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LIBRARY_SEARCH_PATHS**
+### $LIBRARY_SEARCH_PATHS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is a list of paths to folders to be searched by the linker for libraries used by the product. Paths are |
@@ -3981,7 +3981,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LINKER_DISPLAYS_MANGLED_NAMES**
+### $LINKER_DISPLAYS_MANGLED_NAMES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting causes the linker to display mangled names for C++ symbols. Normally, this is not recommended, |
@@ -3992,7 +3992,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LINK_WITH_STANDARD_LIBRARIES**
+### $LINK_WITH_STANDARD_LIBRARIES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If this setting activated, then the compiler driver will automatically pass its standard libraries to the |
@@ -4004,7 +4004,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LLVM_IMPLICIT_AGGRESSIVE_OPTIMIZATIONS**
+### $LLVM_IMPLICIT_AGGRESSIVE_OPTIMIZATIONS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | If aggressive optimizations are enabled. |
@@ -4014,7 +4014,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(LLVM_OPTIMIZATION_LEVEL_VAL_$(GCC_OPTIMIZATION_LEVEL))` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LLVM_LTO**
+### $LLVM_LTO
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enabling this setting allows the optimizer to look across object files in your program and optimize across |
@@ -4025,7 +4025,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LLVM_OPTIMIZATION_LEVEL_VAL_0**
+### $LLVM_OPTIMIZATION_LEVEL_VAL_0
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -4033,7 +4033,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LLVM_OPTIMIZATION_LEVEL_VAL_1**
+### $LLVM_OPTIMIZATION_LEVEL_VAL_1
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -4041,7 +4041,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LLVM_OPTIMIZATION_LEVEL_VAL_2**
+### $LLVM_OPTIMIZATION_LEVEL_VAL_2
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -4049,7 +4049,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LLVM_OPTIMIZATION_LEVEL_VAL_3**
+### $LLVM_OPTIMIZATION_LEVEL_VAL_3
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -4057,7 +4057,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LLVM_OPTIMIZATION_LEVEL_VAL_fast**
+### $LLVM_OPTIMIZATION_LEVEL_VAL_fast
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -4065,7 +4065,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LLVM_OPTIMIZATION_LEVEL_VAL_s**
+### $LLVM_OPTIMIZATION_LEVEL_VAL_s
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -4073,7 +4073,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LOCAL_ADMIN_APPS_DIR**
+### $LOCAL_ADMIN_APPS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -4081,7 +4081,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/Applications/Utilities` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LOCAL_APPS_DIR**
+### $LOCAL_APPS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -4089,7 +4089,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/Applications` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LOCAL_DEVELOPER_DIR**
+### $LOCAL_DEVELOPER_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -4097,7 +4097,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/Library/Developer` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$LOCAL_LIBRARY_DIR**
+### $LOCAL_LIBRARY_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -4105,7 +4105,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/Library` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$MACH_O_TYPE**
+### $MACH_O_TYPE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This setting determines the format of the produced binary and how it can be linked when building other binaries.  |
@@ -4121,7 +4121,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$MACOSX_DEPLOYMENT_TARGET**
+### $MACOSX_DEPLOYMENT_TARGET
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Code will load on this and later versions of OS X. Framework APIs that are unavailable in earlier versions will |
@@ -4144,7 +4144,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `10.9` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$MODULEMAP_FILE**
+### $MODULEMAP_FILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is the project-relative path to the LLVM module map file that defines the module structure for the compiler. |
@@ -4155,7 +4155,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$MODULEMAP_PRIVATE_FILE**
+### $MODULEMAP_PRIVATE_FILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is the project-relative path to the LLVM module map file that defines the module structure for private headers. |
@@ -4165,7 +4165,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$MODULE_CACHE_DIR**
+### $MODULE_CACHE_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Absolute path of folder in which compiler stores its cached "cmodules" - this cache is a performance improvement.|
@@ -4175,7 +4175,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(DERIVED_DATA_DIR)/ModuleCache` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$MODULE_NAME**
+### $MODULE_NAME
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is the identifier of the kernel module listed in the generated stub. This is only used when building kernel extensions. |
@@ -4185,7 +4185,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$MODULE_START**
+### $MODULE_START
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This defines the name of the kernel module start routine. This is only used when building kernel extensions. |
@@ -4195,7 +4195,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$MODULE_STOP**
+### $MODULE_STOP
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This defines the name of the kernel module stop routine. This is only used when building kernel extensions. |
@@ -4205,7 +4205,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$MODULE_VERSION**
+### $MODULE_VERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is the version of the kernel module listed in the generated stub. This is only used when building kernel extensions. |
@@ -4215,7 +4215,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$MTL_ENABLE_DEBUG_INFO**
+### $MTL_ENABLE_DEBUG_INFO
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Produce debugging information. This information is required for shader profiling. If enabled, passes flag `-gline-tables-only` |
@@ -4225,7 +4225,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$NATIVE_ARCH**
+### $NATIVE_ARCH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the architecture on which the build is being performed (same as `$(CURRENT_ARCH)`). |
@@ -4235,7 +4235,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `i386` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$OBJC_ABI_VERSION**
+### $OBJC_ABI_VERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Objective-C ABI version |
@@ -4243,7 +4243,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$OBJECT_FILE_DIR**
+### $OBJECT_FILE_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Partially identifies the directory into which variant object files are placed. The complete specification is |
@@ -4256,7 +4256,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build/Objects` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$OBJECT_FILE_DIR_**
+### $OBJECT_FILE_DIR_
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Fully identifies the directory into which variant object files are placed. For each build variant in | 
@@ -4270,7 +4270,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build/Objects-normal` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$OBJROOT**
+### $OBJROOT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The path where intermediate files will be placed during a build. Intermediate files include generated sources, |
@@ -4282,7 +4282,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(PROJECT_DIR)/build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ONLY_ACTIVE_ARCH**
+### $ONLY_ACTIVE_ARCH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether the product includes only object code for the native architecture. |
@@ -4296,7 +4296,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * Otherwise: `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$ORDER_FILE**
+### $ORDER_FILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The path to a file which alters the order in which functions and data are laid out. For each section in the |
@@ -4315,7 +4315,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$OS**
+### $OS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Current OS |
@@ -4325,7 +4325,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `MACOS` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$OSAC**
+### $OSAC
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to `osacompile` tool. |
@@ -4335,7 +4335,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/usr/bin/osacompile` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$OSACOMPILE_EXECUTE_ONLY**
+### $OSACOMPILE_EXECUTE_ONLY
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Saves the output script in execute-only form: the script can be run, but cannot be opened in Script Editor or |
@@ -4346,7 +4346,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | NO |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$OTHER_CFLAGS**
+### $OTHER_CFLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of additional flags to pass to the compiler for C and Objective-C files. Be sure to |
@@ -4358,7 +4358,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$OTHER_CODE_SIGN_FLAGS**
+### $OTHER_CODE_SIGN_FLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This build setting allows you to pass any additional options you need to codesign(1) as a single space-delimited string. |
@@ -4368,7 +4368,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$OTHER_CPLUSPLUSFLAGS**
+### $OTHER_CPLUSPLUSFLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of additional flags to pass to the compiler for C++ and Objective-C++ files. Be sure to |
@@ -4380,7 +4380,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(OTHER_CFLAGS)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$OTHER_LDFLAGS**
+### $OTHER_LDFLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Options defined in this setting are passed to invocations of the linker. |
@@ -4390,7 +4390,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$OTHER_LIBTOOLFLAGS**
+### $OTHER_LIBTOOLFLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Options defined in this setting are passed to all invocations of the archive librarian, which is used to generate static libraries. |
@@ -4400,7 +4400,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$OTHER_OSACOMPILEFLAGS**
+### $OTHER_OSACOMPILEFLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of additional flags to pass to osacompile. Be sure to backslash-escape any arguments that |
@@ -4412,7 +4412,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES**
+### $PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of directory paths. Identifies the directories to exclude from header-file scans when the |
@@ -4423,7 +4423,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks $(SYSTEM_DEVELOPER_DIR)/Headers $(SYSTEM_DEVELOPER_DIR)/SDKs $(SYSTEM_DEVELOPER_DIR)/Platforms` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PLATFORM_DEVELOPER_APPLICATIONS_DIR**
+### $PLATFORM_DEVELOPER_APPLICATIONS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -4433,7 +4433,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Applications` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PLATFORM_DEVELOPER_BIN_DIR**
+### $PLATFORM_DEVELOPER_BIN_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -4443,7 +4443,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/usr/bin` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PLATFORM_DEVELOPER_LIBRARY_DIR**
+### $PLATFORM_DEVELOPER_LIBRARY_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -4453,7 +4453,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Library` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PLATFORM_DEVELOPER_SDK_DIR**
+### $PLATFORM_DEVELOPER_SDK_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -4463,7 +4463,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PLATFORM_DEVELOPER_TOOLS_DIR**
+### $PLATFORM_DEVELOPER_TOOLS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
@@ -4473,7 +4473,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Tools` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PLATFORM_DEVELOPER_USR_DIR**
+### $PLATFORM_DEVELOPER_USR_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -4483,7 +4483,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/usr `|
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PLATFORM_DIR**
+### $PLATFORM_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to the current platform bundle. |
@@ -4493,7 +4493,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `xcrun --show-sdk-platform-path --sdk $(SDKROOT)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PLATFORM_NAME**
+### $PLATFORM_NAME
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Name taken from the platform bundle. |
@@ -4503,7 +4503,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `macosx` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PLATFORM_PREFERRED_ARCH**
+### $PLATFORM_PREFERRED_ARCH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Preferred architectures, value taken from the platform bundle. |
@@ -4511,7 +4511,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PLATFORM_PRODUCT_BUILD_VERSION**
+### $PLATFORM_PRODUCT_BUILD_VERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Build version taken from the platform bundle. |
@@ -4519,7 +4519,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PLIST_FILE_OUTPUT_FORMAT**
+### $PLIST_FILE_OUTPUT_FORMAT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies the output encoding for Property List (.plist) files (by default, the output encoding will be |
@@ -4534,7 +4534,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `same-as-input` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PRECOMPILE_PREFIX_HEADER**
+### $PRECOMPILE_PREFIX_HEADER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Old setting, see `$(GCC_PRECOMPILE_PREFIX_HEADER)`|
@@ -4544,7 +4544,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR**
+### $PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This setting allows for better control of sharing precompiled prefix header files between projects. By default, |
@@ -4561,7 +4561,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PREFIX_HEADER**
+### $PREFIX_HEADER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Old setting, see `$(GCC_PREFIX_HEADER)` |
@@ -4572,7 +4572,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 
-**$PRELINK_FLAGS**
+### $PRELINK_FLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Additional flags to pass when performing a single-object prelink. |
@@ -4582,7 +4582,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PRELINK_LIBS**
+### $PRELINK_LIBS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Additional libraries to pass when performing a single-object prelink. |
@@ -4592,7 +4592,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PRESERVE_DEAD_CODE_INITS_AND_TERMS**
+### $PRESERVE_DEAD_CODE_INITS_AND_TERMS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting (in combination with the Dead Code Stripping `-dead_strip option`) causes the |
@@ -4605,7 +4605,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PRIVATE_HEADERS_FOLDER_PATH**
+### $PRIVATE_HEADERS_FOLDER_PATH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is the location to copy the private headers during building, relative to the built products folder. |
@@ -4615,7 +4615,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PRODUCT_DEFINITION_PLIST**
+### $PRODUCT_DEFINITION_PLIST
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to a file specifying additional requirements for a product archive. |
@@ -4625,7 +4625,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PRODUCT_MODULE_NAME**
+### $PRODUCT_MODULE_NAME
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The name to use for the source code module constructed for this target, and which will be used to import the |
@@ -4638,7 +4638,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `MyProject` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PRODUCT_NAME**
+### $PRODUCT_NAME
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies the name of the product the target builds. |
@@ -4650,7 +4650,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `MyProject` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PROJECT**
+### $PROJECT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Name of the project. |
@@ -4660,7 +4660,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `MyProject` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PROJECT_DERIVED_FILE_DIR**
+### $PROJECT_DERIVED_FILE_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to the derived sources for the current project. |
@@ -4672,7 +4672,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/DerivedSources` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PROJECT_DIR**
+### $PROJECT_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -4680,7 +4680,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PROJECT_FILE_PATH**
+### $PROJECT_FILE_PATH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to the project file currently being worked from. |
@@ -4690,7 +4690,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/MyProject.xcodeproj` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PROJECT_NAME**
+### $PROJECT_NAME
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies the name of the project that defines the target. |
@@ -4702,7 +4702,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `MyProject` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PROJECT_TEMP_DIR**
+### $PROJECT_TEMP_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the directory in which the project’s intermediate build files are placed. This directory is shared |
@@ -4716,7 +4716,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PROJECT_TEMP_ROOT**
+### $PROJECT_TEMP_ROOT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -4726,7 +4726,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PROVISIONING_PROFILE**
+### $PROVISIONING_PROFILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The UUID of a valid provisioning profile. A missing or invalid profile will cause a build error. |
@@ -4736,7 +4736,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$PUBLIC_HEADERS_FOLDER_PATH**
+### $PUBLIC_HEADERS_FOLDER_PATH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is the location to copy the public headers during building, relative to the built products folder. |
@@ -4746,7 +4746,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$REMOVE_CVS_FROM_RESOURCES**
+### $REMOVE_CVS_FROM_RESOURCES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -4754,7 +4754,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$REMOVE_GIT_FROM_RESOURCES**
+### $REMOVE_GIT_FROM_RESOURCES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -4762,7 +4762,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$REMOVE_HEADERS_FROM_EMBEDDED_BUNDLES**
+### $REMOVE_HEADERS_FROM_EMBEDDED_BUNDLES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -4770,7 +4770,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$REMOVE_HG_FROM_RESOURCES**
+### $REMOVE_HG_FROM_RESOURCES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -4778,7 +4778,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$REMOVE_SVN_FROM_RESOURCES**
+### $REMOVE_SVN_FROM_RESOURCES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -4786,7 +4786,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$RETAIN_RAW_BINARIES**
+### $RETAIN_RAW_BINARIES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether the binary is stripped. |
@@ -4799,7 +4799,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$REZ_COLLECTOR_DIR**
+### $REZ_COLLECTOR_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies the directory in which the collected Resource Manager resources generated by ResMerger are stored |
@@ -4812,7 +4812,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProduct.build/ResourceManagerResources` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$REZ_OBJECTS_DIR**
+### $REZ_OBJECTS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | SSpecifies the directory in which compiled Resource Manager resources generated by Rez are stored before they |
@@ -4825,7 +4825,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProduct.build/ResourceManagerResources/Objects` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$REZ_SEARCH_PATHS**
+### $REZ_SEARCH_PATHS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is a list of paths to search for files with resource manager resources. Paths are delimited by whitespace, |
@@ -4836,7 +4836,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$RUN_CLANG_STATIC_ANALYZER**
+### $RUN_CLANG_STATIC_ANALYZER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting will cause Xcode to run the Clang static analysis tool on qualifying source files during every build. |
@@ -4846,7 +4846,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SCAN_ALL_SOURCE_FILES_FOR_INCLUDES**
+### $SCAN_ALL_SOURCE_FILES_FOR_INCLUDES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting will cause all source files to be scanned for includes (e.g. of header files) when |
@@ -4860,7 +4860,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SDKROOT**
+### $SDKROOT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies the directory of the base SDK to use to build the product. |
@@ -4872,7 +4872,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `macosx` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SDK_DIR**
+### $SDK_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to SDK bundle|
@@ -4882,7 +4882,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `xcrun --show-sdk-path` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SDK_NAME**
+### $SDK_NAME
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Name of current SDK. |
@@ -4892,7 +4892,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `macosx10.10` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SDK_PRODUCT_BUILD_VERSION**
+### $SDK_PRODUCT_BUILD_VERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Build version from the SDK bundle. |
@@ -4900,7 +4900,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SECTORDER_FLAGS**
+### $SECTORDER_FLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | These flags are typically used to specify options for ordering symbols within segments, for example the |
@@ -4913,7 +4913,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SED**
+### $SED
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to `sed` tool. |
@@ -4923,7 +4923,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/usr/bin/sed` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SEPARATE_STRIP**
+### $SEPARATE_STRIP
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting when the linked product is to be stripped will cause stripping to occur via a |
@@ -4934,7 +4934,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SEPARATE_SYMBOL_EDIT**
+### $SEPARATE_SYMBOL_EDIT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting when the linked product's symbols are to be edited will cause editing to occur via a |
@@ -4945,7 +4945,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SHARED_PRECOMPS_DIR**
+### $SHARED_PRECOMPS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies the directory in which to place precompiled headers. Targets can share precompiled headers by |
@@ -4956,7 +4956,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(CACHE_ROOT)/SharedPrecompiledHeaders` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SKIP_INSTALL**
+### $SKIP_INSTALL
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether to place the product at the location indicated by `$(DSTROOT)` or the uninstalled products |
@@ -4970,7 +4970,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SOURCE_ROOT**
+### $SOURCE_ROOT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -4980,7 +4980,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SRCROOT**
+### $SRCROOT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the directory containing the target’s source files. |
@@ -4992,7 +4992,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$STRINGS_FILE_OUTPUT_ENCODING**
+### $STRINGS_FILE_OUTPUT_ENCODING
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specify the encoding to be used for the output files (by default, the output encoding will be 16-bit Unicode). |
@@ -5009,7 +5009,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `UTF-16` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$STRIPFLAGS**
+### $STRIPFLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Additional flags to be passed when stripping the linked product of the build. |
@@ -5019,7 +5019,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | Default value will be computed from `$(UNSTRIPPED_PRODUCT)` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$STRIP_INSTALLED_PRODUCT**
+### $STRIP_INSTALLED_PRODUCT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Activating this setting causes the linked product of the build to be stripped of symbols as part of deployment postprocessing. |
@@ -5029,7 +5029,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$STRIP_STYLE**
+### $STRIP_STYLE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Defines the level of symbol stripping to be performed on the linked product of the build. The default value |
@@ -5044,7 +5044,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `all` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SUPPORTED_PLATFORMS**
+### $SUPPORTED_PLATFORMS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The list of supported platforms from which a base SDK can be used. This setting is used if the product can be |
@@ -5055,7 +5055,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `macosx` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SWIFT_OPTIMIZATION_LEVEL**
+### $SWIFT_OPTIMIZATION_LEVEL
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Swift optimization level. |
@@ -5069,7 +5069,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `-Onone` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYMROOT**
+### $SYMROOT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | The path at which all products will be placed when performing a build. Typically this path is not set per |
@@ -5080,7 +5080,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(PROJECT_DIR)/build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_ADMIN_APPS_DIR**
+### $SYSTEM_ADMIN_APPS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5088,7 +5088,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/Applications/Utilities` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_APPS_DIR**
+### $SYSTEM_APPS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5096,7 +5096,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/Applications` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_CORE_SERVICES_DIR**
+### $SYSTEM_CORE_SERVICES_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5104,7 +5104,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/System/Library/CoreServices` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEMOS_DIR**
+### $SYSTEM_DEMOS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5112,7 +5112,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/Applications/Extras` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEVELOPER_APPS_DIR**
+### $SYSTEM_DEVELOPER_APPS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5122,7 +5122,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Applications` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEVELOPER_BIN_DIR**
+### $SYSTEM_DEVELOPER_BIN_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5132,7 +5132,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/usr/bin` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEVELOPER_DEMOS_DIR**
+### $SYSTEM_DEVELOPER_DEMOS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5142,7 +5142,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Applications/Utilities/Built Examples` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEVELOPER_DIR**
+### $SYSTEM_DEVELOPER_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5152,7 +5152,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEVELOPER_DOC_DIR**
+### $SYSTEM_DEVELOPER_DOC_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5162,7 +5162,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/ADC Reference Library` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR**
+### $SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5172,7 +5172,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Applications/Graphics Tools` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEVELOPER_JAVA_TOOLS_DIR**
+### $SYSTEM_DEVELOPER_JAVA_TOOLS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5182,7 +5182,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Applications/Java Tools` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR**
+### $SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5192,7 +5192,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Applications/Performance Tools` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEVELOPER_RELEASENOTES_DIR**
+### $SYSTEM_DEVELOPER_RELEASENOTES_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5202,7 +5202,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEVELOPER_TOOLS**
+### $SYSTEM_DEVELOPER_TOOLS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5212,7 +5212,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Tools` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEVELOPER_TOOLS_DOC_DIR**
+### $SYSTEM_DEVELOPER_TOOLS_DOC_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5222,7 +5222,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR**
+### $SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5232,7 +5232,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEVELOPER_USR_DIR**
+### $SYSTEM_DEVELOPER_USR_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5242,7 +5242,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/usr` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DEVELOPER_UTILITIES_DIR**
+### $SYSTEM_DEVELOPER_UTILITIES_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5252,7 +5252,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Applications/Utilities` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_DOCUMENTATION_DIR**
+### $SYSTEM_DOCUMENTATION_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5260,7 +5260,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/Library/Documentation` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_KEXT_INSTALL_PATH**
+### $SYSTEM_KEXT_INSTALL_PATH
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5268,7 +5268,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/System/Library/Extensions` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$SYSTEM_LIBRARY_DIR**
+### $SYSTEM_LIBRARY_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5276,7 +5276,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `/System/Library` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$TARGETNAME**
+### $TARGETNAME
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Alias of `$(TARGET_NAME)`|
@@ -5286,7 +5286,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `MyProject` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$TARGET_BUILD_DIR**
+### $TARGET_BUILD_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the root of the directory hierarchy that contains the product’s files (no intermediate build files). |
@@ -5301,7 +5301,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/build/Debug` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$TARGET_NAME**
+### $TARGET_NAME
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Name of current build target. |
@@ -5311,7 +5311,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `MyProject` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$TARGET_TEMP_DIR**
+### $TARGET_TEMP_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the directory containing the target’s intermediate build files. Run Script build phases should place |
@@ -5324,7 +5324,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$TARGETED_DEVICE_FAMILY**
+### $TARGETED_DEVICE_FAMILY
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Comma-separated list of numeric identifiers. Specifies the device families on which the product must be capable of running. |
@@ -5339,7 +5339,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `1,2` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$TEMP_DIR**
+### $TEMP_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5349,7 +5349,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$TEMP_FILES_DIR**
+### $TEMP_FILES_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5359,7 +5359,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$TEMP_FILE_DIR**
+### $TEMP_FILE_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5369,7 +5369,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$TEMP_ROOT**
+### $TEMP_ROOT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5379,7 +5379,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/MyProject/build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$TEST_HOST**
+### $TEST_HOST
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to the executable into which a bundle of tests is injected. Only specify this setting if testing an |
@@ -5390,7 +5390,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$TREAT_MISSING_BASELINES_AS_TEST_FAILURES**
+### $TREAT_MISSING_BASELINES_AS_TEST_FAILURES
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | When running tests that measure performance via XCTestCase, report missing baselines as test failures.  |
@@ -5400,7 +5400,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$UID**
+### $UID
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Current user id. |
@@ -5412,7 +5412,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `501` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$UNEXPORTED_SYMBOLS_FILE**
+### $UNEXPORTED_SYMBOLS_FILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is a project-relative path to a file that lists the symbols not to export. Passes flag `-unexported_symbols_list` |
@@ -5422,7 +5422,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$UNSTRIPPED_PRODUCT**
+### $UNSTRIPPED_PRODUCT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
@@ -5430,7 +5430,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$USER**
+### $USER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Current user name. |
@@ -5442,7 +5442,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `genica` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$USER_APPS_DIR**
+### $USER_APPS_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5452,7 +5452,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/Applications` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$USER_HEADER_SEARCH_PATHS**
+### $USER_HEADER_SEARCH_PATHS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is a list of paths to folders to be searched by the compiler for included or imported user header files |
@@ -5467,7 +5467,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$USER_LIBRARY_DIR**
+### $USER_LIBRARY_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5477,7 +5477,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Users/genica/Library` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$USE_HEADERMAP**
+### $USE_HEADERMAP
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Enable use of headermap files. |
@@ -5487,7 +5487,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `YES` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$USE_HEADER_SYMLINKS**
+### $USE_HEADER_SYMLINKS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Part of headermap settings. |
@@ -5497,7 +5497,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$VALIDATE_PRODUCT**
+### $VALIDATE_PRODUCT
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether to run product-validation tests. |
@@ -5510,7 +5510,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$VALID_ARCHS**
+### $VALID_ARCHS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of identifiers. Specifies the architectures for which the binary may be built. During the |
@@ -5524,7 +5524,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `i386 x86_64` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$VERSIONING_SYSTEM**
+### $VERSIONING_SYSTEM
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Selects the process used for version-stamping generated files. |
@@ -5537,7 +5537,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$VERSION_INFO_BUILDER**
+### $VERSION_INFO_BUILDER
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This defines a reference to the user performing a build to be included in the generated Apple Generic Versioning |
@@ -5548,7 +5548,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | $(USER) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$VERSION_INFO_EXPORT_DECL**
+### $VERSION_INFO_EXPORT_DECL
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This defines a prefix string for the version info symbol declaration in the generated Apple Generic Versioning |
@@ -5560,7 +5560,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$VERSION_INFO_FILE**
+### $VERSION_INFO_FILE
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Used to specify a name for the source file that will be generated by Apple Generic Versioning and compiled |
@@ -5571,7 +5571,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `$(PRODUCT_NAME)_vers.c` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$VERSION_INFO_PREFIX**
+### $VERSION_INFO_PREFIX
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Used as a prefix for the name of the version info symbol in the generated versioning source file. If you |
@@ -5582,7 +5582,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$VERSION_INFO_SUFFIX**
+### $VERSION_INFO_SUFFIX
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Used as a suffix for the name of the version info symbol in the generated versioning source file. This is rarely used. |
@@ -5592,7 +5592,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$WARNING_CFLAGS**
+### $WARNING_CFLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of additional warning flags to pass to the compiler. Use this setting if Xcode does not |
@@ -5603,7 +5603,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$WARNING_LDFLAGS**
+### $WARNING_LDFLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | These flags are passed with linker invocations, and by default give the `-no_arch_warnings` flag to the linker |
@@ -5614,7 +5614,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$WRAPPER_EXTENSION**
+### $WRAPPER_EXTENSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is the extension used for product wrappers, which has a default value based on the product type. |
@@ -5624,7 +5624,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | empty string |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$XCODE_APP_SUPPORT_DIR**
+### $XCODE_APP_SUPPORT_DIR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
@@ -5634,7 +5634,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Library/Xcode` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$XCODE_PRODUCT_BUILD_VERSION**
+### $XCODE_PRODUCT_BUILD_VERSION
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This value is hard-coded into Xcode's frameworks. |
@@ -5644,7 +5644,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `6C131e` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$XCODE_VERSION_ACTUAL**
+### $XCODE_VERSION_ACTUAL
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This value is hard-coded into Xcode's frameworks. |
@@ -5654,7 +5654,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `0620` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$XCODE_VERSION_MAJOR**
+### $XCODE_VERSION_MAJOR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This value is hard-coded into Xcode's frameworks. |
@@ -5664,7 +5664,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `0600` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$XCODE_VERSION_MINOR**
+### $XCODE_VERSION_MINOR
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This value is hard-coded into Xcode's frameworks. |
@@ -5674,7 +5674,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Example Value | `0020` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$YACC**
+### $YACC
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Path to `yacc` tool |
@@ -5684,7 +5684,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Default Value | `yacc` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
-**$YACCFLAGS**
+### $YACCFLAGS
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of flags to pass to yacc |
