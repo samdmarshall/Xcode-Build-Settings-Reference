@@ -2,8 +2,8 @@
 
 All variables are prefixed with "$" to uniquely identify them on this page. [Submitting updates to this page](https://github.com/samdmarshall/Xcode-Build-Settings-Reference).
 
-<!--export build setting types: `cat buildsettings.md | grep -E '^\|\ Type|### \$' | sed 's/^### \$//g' | sed 's/\| Type *\| \(.*\) *\|/\1/g'`-->
-<!--pair lines: `paste - -` (or `paste -d ' ' - -` for separating by spaces) -->
+<!--export build setting types: `cat buildsettings.md | grep -E '^\|\ Type|### \$' | sed 's/^### \$//g' | sed 's/\| Type *\| \([A-Za-z]*\) *\|/\1/g'`-->
+<!--pair lines: `paste - -` or `awk 'NR%2{ORS=" ";print;next}{ORS="\n";print}'` -->
 
 ### $ACTION
 
