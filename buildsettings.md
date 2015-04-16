@@ -12,13 +12,13 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Values        | * `build`: Build the product and place it in the product build directory `$(CONFIGURATION_BUILD_DIR)`. |
-|               | * `clean`: Remove the product and build files in the product build directory `$(CONFIGURATION_BUILD_DIR)` and |
-|               |   the intermediate build files directory `$(CONFIGURATION_TEMP_DIR)`. |
-|               | * `install`: Build the product and place it in its installation destination `$(INSTALL_PATH)`. |
+| Values        | * `build`: Build the product and place it in the product build directory [`$(CONFIGURATION_BUILD_DIR)`](#configuration_build_dir). |
+|               | * `clean`: Remove the product and build files in the product build directory [`$(CONFIGURATION_BUILD_DIR)`](#configuration_build_dir) and |
+|               |   the intermediate build files directory [`$(CONFIGURATION_TEMP_DIR)`](#configuration_temp_dir). |
+|               | * `install`: Build the product and place it in its installation destination [`$(INSTALL_PATH)`](#install_path). |
 |               | * `installhdrs`: Copy the product’s public and private header files into the public headers directory |
-|               |   `$(PUBLIC_HEADERS_FOLDER_PATH)` and the private headers directory `$(PRIVATE_HEADERS_FOLDER_PATH)`, respectively. |
-|               | * `installsrc`: Copy the target's source files into the project directory `$(SRCROOT)`. |
+|               |   [`$(PUBLIC_HEADERS_FOLDER_PATH)`](#public_headers_folder_path) and the private headers directory [`$(PRIVATE_HEADERS_FOLDER_PATH)`](#private_headers_folder_path), respectively. |
+|               | * `installsrc`: Copy the target's source files into the project directory [`$(SRCROOT)`](#srcroot). |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Default Value | `build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -26,7 +26,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$ADDITIONAL_SDKS](#additional_sdks)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | The locations of any sparse SDKs that should be layered on top of the one specified by `$(SDKROOT)`. If more than |
+| Description   | The locations of any sparse SDKs that should be layered on top of the one specified by [`$(SDKROOT)`](#sdkroot). If more than |
 |               | one SDK is listed, the first one has highest precedence. Every SDK specified in this setting should be a |
 |               | "sparse" SDK, i.e. not an SDK for an entire OS X release. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -38,31 +38,31 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$ALTERNATE_GROUP](#alternate_group)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | The group name or gid for the files listed under the `$(ALTERNATE_PERMISSIONS_FILES)` setting. |
+| Description   | The group name or gid for the files listed under the [`$(ALTERNATE_PERMISSIONS_FILES)`](#alternate_permissions_files) setting. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(INSTALL_GROUP)` |
+| Default Value | [`$(INSTALL_GROUP)`](#install_group) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$ALTERNATE_MODE](#alternate_mode)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Permissions used for the the files listed under the `$(ALTERNATE_PERMISSIONS_FILES)` setting. |
+| Description   | Permissions used for the the files listed under the [`$(ALTERNATE_PERMISSIONS_FILES)`](#alternate_permissions_files) setting. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(INSTALL_MODE_FLAG)` |
+| Default Value | [`$(INSTALL_MODE_FLAG)`](#install_mode_flag) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$ALTERNATE_OWNER](#alternate_owner)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | The owner name or uid for the files listed under the `$(ALTERNATE_PERMISSIONS_FILES)` setting. |
+| Description   | The owner name or uid for the files listed under the [`$(ALTERNATE_PERMISSIONS_FILES)`](#alternate_permissions_files) setting. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(INSTALL_OWNER)` |
+| Default Value | [`$(INSTALL_OWNER)`](#install_owner) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$ALTERNATE_PERMISSIONS_FILES](#alternate_permissions_files)
@@ -163,7 +163,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(ARCHS_STANDARD)` |
+| Default Value | [`$(ARCHS_STANDARD)`](#archs_standard) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `x86_64` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -179,7 +179,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * When `$(SDKROOT)=iphonesimulator`: `i386 x86_64` |
 |               | * When `$(SDKROOT)=macosx`: `x86_64` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Example Value | `$(ARCHS_STANDARD_INCLUDING_64_BIT)` |
+| Example Value | [`$(ARCHS_STANDARD_INCLUDING_64_BIT)`](#archs_standard_including_64_bit) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$ARCHS_STANDARD_32_64_BIT](#archs_standard_32_64_bit)
@@ -317,21 +317,21 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$BUILD_DIR](#build_dir)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Alias for `$(SYMROOT)`|
+| Description   | Alias for [`$(SYMROOT)`](#symroot)|
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(SYMROOT)` |
+| Default Value | [`$(SYMROOT)`](#symroot) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$BUILD_ROOT](#build_root)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Alias for `$(SYMROOT)`|
+| Description   | Alias for [`$(SYMROOT)`](#symroot)|
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(SYMROOT)` |
+| Default Value | [`$(SYMROOT)`](#symroot) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$BUILD_STYLE](#build_style)
@@ -366,12 +366,12 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Description   | Identifies the directory under which all the product’s files can be found. This directory contains either |
 |               | product files or symbolic links to them. Run Script build phases can use the value of this build setting as a |
 |               | convenient way to refer to the product files built by one or more targets even when these files are scattered |
-|               | throughout a directory hierarchy (for example, when `$(DEPLOYMENT_LOCATION)` is set to YES). |
+|               | throughout a directory hierarchy (for example, when [`$(DEPLOYMENT_LOCATION)`](#deployment_location) is set to YES). |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Values        | * When `$(DEPLOYMENT_LOCATION)=YES` and `$(RETAIN_RAW_BINARIES)=YES`: `$(SYMROOT)/BuiltProducts` |
-|               | * Otherwise: `$(CONFIGURATION_BUILD_DIR)` |
+|               | * Otherwise: [`$(CONFIGURATION_BUILD_DIR)`](#configuration_build_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$BUNDLE_LOADER](#bundle_loader)
@@ -387,11 +387,11 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$CACHE_ROOT](#cache_root)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Alias for `$(CCHROOT)`. |
+| Description   | Alias for [`$(CCHROOT)`](#cchroot). |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(CCHROOT)` |
+| Default Value | [`$(CCHROOT)`](#cchroot) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `/var/folders/m5/j4zdc7f9157659_pd5p0_n980000gn/C/com.apple.DeveloperTools/6.2-6C131e/Xcode` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -470,7 +470,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$CLANG_ANALYZER_MALLOC](#clang_analyzer_malloc)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | See `$(CLANG_ANALYZER_MEMORY_MANAGEMENT)`. |
+| Description   | See [`$(CLANG_ANALYZER_MEMORY_MANAGEMENT)`](#clang_analyzer_memory_management). |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -493,7 +493,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(CLANG_ANALYZER_MALLOC)` |
+| Default Value | [`$(CLANG_ANALYZER_MALLOC)`](#clang_analyzer_malloc) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$CLANG_ANALYZER_OBJC_ATSYNC](#clang_analyzer_objc_atsync)
@@ -788,7 +788,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(COLOR_DIAGNOSTICS)` |
+| Default Value | [`$(COLOR_DIAGNOSTICS)`](#color_diagnostics) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$CLANG_CXX_LANGUAGE_STANDARD](#clang_cxx_language_standard)
@@ -846,7 +846,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(APPLICATION_EXTENSION_API_ONLY)` |
+| Default Value | [`$(APPLICATION_EXTENSION_API_ONLY)`](#application_extension_api_only) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$CLANG_ENABLE_MODULES](#clang_enable_modules)
@@ -923,17 +923,17 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$CLANG_MODULES_IGNORE_MACROS](#clang_modules_ignore_macros)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | If `$(CLANG_ENABLE_MODULES)` is enabled, passes flag `-fmodules-ignore-macro=$(value)`. |
+| Description   | If [`$(CLANG_ENABLE_MODULES)`](#clang_enable_modules) is enabled, passes flag `-fmodules-ignore-macro=$(value)`. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | StringList |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS)` |
+| Default Value | [`$(GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS)`](#gcc_preprocessor_definitions_not_used_in_precomps) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$CLANG_MODULES_VALIDATE_SYSTEM_HEADERS](#clang_modules_validate_system_headers)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | If `$(CLANG_ENABLE_MODULES)` is enabled, if enabled passes flag `-fmodules-validate-system-headers`. |
+| Description   | If [`$(CLANG_ENABLE_MODULES)`](#clang_enable_modules) is enabled, if enabled passes flag `-fmodules-validate-system-headers`. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -953,11 +953,11 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$CLANG_MODULE_CACHE_PATH](#clang_module_cache_path)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Passes flag `-fmodules-cache-path=$(CLANG_MODULE_CACHE_PATH)` if `$(CLANG_ENABLE_MODULES)` is enabled. |
+| Description   | Passes flag `-fmodules-cache-path=$(CLANG_MODULE_CACHE_PATH)` if [`$(CLANG_ENABLE_MODULES)`](#clang_enable_modules) is enabled. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(MODULE_CACHE_DIR)` |
+| Default Value | [`$(MODULE_CACHE_DIR)`](#module_cache_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `/Users/genica/Library/Developer/Xcode/DerivedData/ModuleCache` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -1056,7 +1056,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Values        | * `YES`: Passes flag `-Wbool-conversion` |
 |               | * `NO`: Passes flag `-Wno-bool-conversion` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION)` |
+| Default Value | [`$(CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION)`](#clang_warn_suspicious_implicit_conversion) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$CLANG_WARN_CONSTANT_CONVERSION](#clang_warn_constant_conversion)
@@ -1070,7 +1070,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Values        | * `YES`: Passes flag `-Wconstant-conversion` |
 |               | * `NO`: Passes flag `-Wno-constant-conversion` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION)` |
+| Default Value | [`$(CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION)`](#clang_warn_suspicious_implicit_conversion) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$CLANG_WARN_CXX0X_EXTENSIONS](#clang_warn_cxx0x_extensions)
@@ -1148,7 +1148,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Values        | * `YES`: Passes flag `-Wenum-conversion` |
 |               | * `NO`: Passes flag `-Wno-enum-conversion` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION)` |
+| Default Value | [`$(CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION)`](#clang_warn_suspicious_implicit_conversion) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$CLANG_WARN_IMPLICIT_SIGN_CONVERSION](#clang_warn_implicit_sign_conversion)
@@ -1175,7 +1175,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Values        | * `YES`: Passes flag `-Wint-conversion` |
 |               | * `NO`: Passes flag `-Wno-int-conversion` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION)` |
+| Default Value | [`$(CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION)`](#clang_warn_suspicious_implicit_conversion) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$CLANG_WARN_OBJC_EXPLICIT_OWNERSHIP_TYPE](#clang_warn_objc_explicit_ownership_type)
@@ -1607,7 +1607,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Values        | * When `$(CONFIGURATION)` in `$(BUILD_VARIANTS)`: `$(CONFIGURATION)` |
+| Values        | * When [`$(CONFIGURATION)`](#configuration) in [`$(BUILD_VARIANTS)`](#build_variants): [`$(CONFIGURATION)`](#configuration) |
 |               | * Otherwise: `normal` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
@@ -1653,7 +1653,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(SYSTEM_KEXT_INSTALL_PATH)` |
+| Default Value | [`$(SYSTEM_KEXT_INSTALL_PATH)`](#system_kext_install_path) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$DEFAULT_SSE_LEVEL_3_NO](#default_sse_level_3_no)
@@ -1740,8 +1740,8 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Values        | * YES: Product files are placed in `$(DSTROOT)`. |
-|               | * NO: Product files are placed in `$(SYMROOT)`. |
+| Values        | * YES: Product files are placed in [`$(DSTROOT)`](#dstroot). |
+|               | * NO: Product files are placed in [`$(SYMROOT)`](#symroot). |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Default Value | * When `$(ACTION)=install`: `YES` | 
 |               | * Otherwise: `NO` |
@@ -1775,21 +1775,21 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$DERIVED_FILES_DIR](#derived_files_dir)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | See `$(DERIVED_FILE_DIR)` |
+| Description   | See [`$(DERIVED_FILE_DIR)`](#derived_file_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(DERIVED_FILE_DIR)` |
+| Default Value | [`$(DERIVED_FILE_DIR)`](#derived_file_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$DERIVED_SOURCES_DIR](#derived_sources_dir)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | See `$(DERIVED_FILE_DIR)` |
+| Description   | See [`$(DERIVED_FILE_DIR)`](#derived_file_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(DERIVED_FILE_DIR)` |
+| Default Value | [`$(DERIVED_FILE_DIR)`](#derived_file_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$DEVELOPER_APPLICATIONS_DIR](#developer_applications_dir)
@@ -1930,9 +1930,9 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$DYLIB_INSTALL_NAME_BASE](#dylib_install_name_base)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Sets the base value for the internal "install path" `$(LC_ID_DYLIB)` in a dynamic library. This will be |
-|               | combined with the `$(EXECUTABLE_PATH)` to form the full install path. Setting `$(LD_DYLIB_INSTALL_NAME)` |
-|               | directly will override this setting. This setting defaults to the target's `$(INSTALL_PATH)`. It is ignored |
+| Description   | Sets the base value for the internal "install path" [`$(LC_ID_DYLIB)`](#lc_id_dylib) in a dynamic library. This will be |
+|               | combined with the [`$(EXECUTABLE_PATH)`](#executable_path) to form the full install path. Setting [`$(LD_DYLIB_INSTALL_NAME)`](#ld_dylib_install_name) |
+|               | directly will override this setting. This setting defaults to the target's [`$(INSTALL_PATH)`](#install_path). It is ignored |
 |               | when building any product other than a dynamic library.  |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | StringList |
@@ -2072,7 +2072,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$EXECUTABLE_VARIANT_SUFFIX](#executable_variant_suffix)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | This is the suffix (based on `$(CURRENT_VARIANT)`) used for the executable product generated by the target, |
+| Description   | This is the suffix (based on [`$(CURRENT_VARIANT)`](#current_variant)) used for the executable product generated by the target, |
 |               | which has a default value based on the product type. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
@@ -2105,7 +2105,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of directory paths. Specifies directories in which the compiler searches for frameworks |
 |               | to find included header files. You may specify a recursive path by appending ** to the path. When this build 
-|               | setting is defined, `$(SDKROOT)` is added to the end of the path list that is passed to the compiler. |
+|               | setting is defined, [`$(SDKROOT)`](#sdkroot) is added to the end of the path list that is passed to the compiler. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | PathList |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -2192,7 +2192,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * `dwarf-with-dsym`: Passes `-g` |
 |               | * Otherwise: |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(DEBUG_INFORMATION_FORMAT)` |
+| Default Value | [`$(DEBUG_INFORMATION_FORMAT)`](#debug_information_format) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$GCC_DYNAMIC_NO_PIC](#gcc_dynamic_no_pic)
@@ -2362,7 +2362,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether the binary uses the built-in functions that provide access to the SSE3 extensions to the |
 |               | IA-32 architecture. |
-|               | Old build setting. Kept around for old project compatibility.  Forwards to `$(CLANG_X86_VECTOR_INSTRUCTIONS)` |
+|               | Old build setting. Kept around for old project compatibility.  Forwards to [`$(CLANG_X86_VECTOR_INSTRUCTIONS)`](#clang_x86_vector_instructions) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -2377,7 +2377,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether the binary uses the built-in functions that provide access to the SSE4.1 extensions to the |
 |               | IA-32 architecture. |
-|               | Old build setting. Kept around for old project compatibility.  Forwards to `$(CLANG_X86_VECTOR_INSTRUCTIONS)` |
+|               | Old build setting. Kept around for old project compatibility.  Forwards to [`$(CLANG_X86_VECTOR_INSTRUCTIONS)`](#clang_x86_vector_instructions) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -2392,7 +2392,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Specifies whether the binary uses the built-in functions that provide access to the SSE4.2 extensions to the |
 |               | IA-32 architecture. |
-|               | Old build setting. Kept around for old project compatibility.  Forwards to `$(CLANG_X86_VECTOR_INSTRUCTIONS)` |
+|               | Old build setting. Kept around for old project compatibility.  Forwards to [`$(CLANG_X86_VECTOR_INSTRUCTIONS)`](#clang_x86_vector_instructions) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -2405,7 +2405,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS](#gcc_enable_supplemental_sse3_instructions)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Old build setting. Kept around for old project compatibility. Forwards to `$(CLANG_X86_VECTOR_INSTRUCTIONS)`. |
+| Description   | Old build setting. Kept around for old project compatibility. Forwards to [`$(CLANG_X86_VECTOR_INSTRUCTIONS)`](#clang_x86_vector_instructions). |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -2536,7 +2536,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(MACOSX_DEPLOYMENT_TARGET)` |
+| Default Value | [`$(MACOSX_DEPLOYMENT_TARGET)`](#macosx_deployment_target) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$GCC_NO_COMMON_BLOCKS](#gcc_no_common_blocks)
@@ -2563,7 +2563,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Values        | * `1`: Objective-C version 1 |
 |               | * `2`: Objective-C version 2 |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(OBJC_ABI_VERSION)` |
+| Default Value | [`$(OBJC_ABI_VERSION)`](#objc_abi_version) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$GCC_OBJC_LEGACY_DISPATCH](#gcc_objc_legacy_dispatch)
@@ -2642,7 +2642,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Values        | * `YES`: Target generates a prefix header when the prerequisite is met. |
 |               | * `NO`: Target does not generate a prefix header. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(PRECOMPILE_PREFIX_HEADER)` |
+| Default Value | [`$(PRECOMPILE_PREFIX_HEADER)`](#precompile_prefix_header) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$GCC_PREFIX_HEADER](#gcc_prefix_header)
@@ -2652,7 +2652,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(PREFIX_HEADER)` |
+| Default Value | [`$(PREFIX_HEADER)`](#prefix_header) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `MyProduct_Prefix.pch` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -2682,7 +2682,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$GCC_PRODUCT_TYPE_PREPROCESSOR_DEFINITIONS](#gcc_product_type_preprocessor_definitions)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | See `$(GCC_PREPROCESSOR_DEFINITIONS)`. |
+| Description   | See [`$(GCC_PREPROCESSOR_DEFINITIONS)`](#gcc_preprocessor_definitions). |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | StringList |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -3414,7 +3414,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(HEADERMAP_INCLUDES_PROJECT_HEADERS)` |
+| Default Value | [`$(HEADERMAP_INCLUDES_PROJECT_HEADERS)`](#headermap_includes_project_headers) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$HEADERMAP_INCLUDES_PROJECT_HEADERS](#headermap_includes_project_headers)
@@ -3445,14 +3445,14 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(DEFINES_MODULE)` |
+| Default Value | [`$(DEFINES_MODULE)`](#defines_module) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$HEADER_SEARCH_PATHS](#header_search_paths)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of directory paths. Specifies directories in which to search for header files. (In GCC, |
-|               | this list is passed in the `gcc -I` option.) When this build setting is defined, `$(SDKROOT)` is added to the |
+|               | this list is passed in the `gcc -I` option.) When this build setting is defined, [`$(SDKROOT)`](#sdkroot) is added to the |
 |               | beginning of each system-header path passed to the compiler. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | PathList |
@@ -3652,7 +3652,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(GROUP)` |
+| Default Value | [`$(GROUP)`](#group) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `staff` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -3674,7 +3674,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(USER)` |
+| Default Value | [`$(USER)`](#user) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `genica` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -3691,7 +3691,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 |               | * Application project: `$(HOME)/Applications` |
 |               | * Audio unit and bundle projects: `$(HOME)/Library/Bundles` |
 |               | * Command-line utility project: `$(HOME)/bin` |
-|               | * Apple plug-in project (complete path depends on specific project template): `$(DSTROOT)` |
+|               | * Apple plug-in project (complete path depends on specific project template): [`$(DSTROOT)`](#dstroot) |
 |               | * Dynamic library and static library projects: `/usr/local/lib` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Default Value | empty string |
@@ -3700,11 +3700,11 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$INSTALL_ROOT](#install_root)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Alias to `$(DSTROOT)` |
+| Description   | Alias to [`$(DSTROOT)`](#dstroot) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(DSTROOT)` |
+| Default Value | [`$(DSTROOT)`](#dstroot) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$IPHONEOS_DEPLOYMENT_TARGET](#iphoneos_deployment_target)
@@ -3834,7 +3834,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$LD_DYLIB_INSTALL_NAME](#ld_dylib_install_name)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Sets an internal "install path" `$(LC_ID_DYLIB)` in a dynamic library. Any clients linked against the library |
+| Description   | Sets an internal "install path" [`$(LC_ID_DYLIB)`](#lc_id_dylib) in a dynamic library. Any clients linked against the library |
 |               | will record that path as the way dyld should locate this library. If this option is not specified, then the |
 |               | `-o path` will be used. This setting is ignored when building any product other than a dynamic library. |
 |               | Passes flag `-install_name` |
@@ -4148,7 +4148,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | This is the project-relative path to the LLVM module map file that defines the module structure for the compiler. |
-|               | If empty, it will be automatically generated for appropriate products when `$(DEFINES_MODULE)` is enabled. |
+|               | If empty, it will be automatically generated for appropriate products when [`$(DEFINES_MODULE)`](#defines_module) is enabled. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -4228,7 +4228,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$NATIVE_ARCH](#native_arch)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Identifies the architecture on which the build is being performed (same as `$(CURRENT_ARCH)`). |
+| Description   | Identifies the architecture on which the build is being performed (same as [`$(CURRENT_ARCH)`](#current_arch)). |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -4260,8 +4260,8 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Fully identifies the directory into which variant object files are placed. For each build variant in | 
-|               | `$(BUILD_VARIANTS)`, Xcode generates an `$(OBJECT_FILE_DIR)` build setting with the variant name as a suffix. |
-|               | The generated build setting’s value is computed using `$(OBJECT_FILE_DIR)` and the build variant name. |
+|               | [`$(BUILD_VARIANTS)`](#build_variants), Xcode generates an [`$(OBJECT_FILE_DIR)`](#object_file_dir) build setting with the variant name as a suffix. |
+|               | The generated build setting’s value is computed using [`$(OBJECT_FILE_DIR)`](#object_file_dir) and the build variant name. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -4289,8 +4289,8 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Values        | * `YES`: The product includes only code for the native architecture `$(NATIVE_ARCH)`. |
-|               | * `NO`: The product includes code for the architectures specified in `$(ARCHS)`. |
+| Values        | * `YES`: The product includes only code for the native architecture [`$(NATIVE_ARCH)`](#native_arch). |
+|               | * `NO`: The product includes code for the architectures specified in [`$(ARCHS)`](#archs). |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Default Value | * When `$(CONFIGURATION)=Debug`: `YES` |
 |               | * Otherwise: `NO` |
@@ -4377,7 +4377,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | StringList |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(OTHER_CFLAGS)` |
+| Default Value | [`$(OTHER_CFLAGS)`](#other_cflags) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$OTHER_LDFLAGS](#other_ldflags)
@@ -4537,7 +4537,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$PRECOMPILE_PREFIX_HEADER](#precompile_prefix_header)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Old setting, see `$(GCC_PRECOMPILE_PREFIX_HEADER)`|
+| Description   | Old setting, see [`$(GCC_PRECOMPILE_PREFIX_HEADER)`](#gcc_precompile_prefix_header)|
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -4564,7 +4564,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$PREFIX_HEADER](#prefix_header)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Old setting, see `$(GCC_PREFIX_HEADER)` |
+| Description   | Old setting, see [`$(GCC_PREFIX_HEADER)`](#gcc_prefix_header) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -4633,7 +4633,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(PRODUCT_NAME)` |
+| Default Value | [`$(PRODUCT_NAME)`](#product_name) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `MyProject` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -4645,7 +4645,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | The name of the target at the time it was created. `$(TARGET_NAME)` |
+| Default Value | The name of the target at the time it was created. [`$(TARGET_NAME)`](#target_name) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `MyProject` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -4707,7 +4707,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the directory in which the project’s intermediate build files are placed. This directory is shared |
 |               | between all the targets defined by the project. Run Script build phases should generate intermediate build |
-|               | files in the directory identified by `$(DERIVED_FILE_DIR)`, not the location this build setting specifies. |
+|               | files in the directory identified by [`$(DERIVED_FILE_DIR)`](#derived_file_dir), not the location this build setting specifies. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -4959,13 +4959,13 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$SKIP_INSTALL](#skip_install)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Specifies whether to place the product at the location indicated by `$(DSTROOT)` or the uninstalled products |
-|               | directory inside the directory indicated by `$(TARGET_TEMP_DIR)`. |
+| Description   | Specifies whether to place the product at the location indicated by [`$(DSTROOT)`](#dstroot) or the uninstalled products |
+|               | directory inside the directory indicated by [`$(TARGET_TEMP_DIR)`](#target_temp_dir). |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Values        | * `YES`: When `$(DEPLOYMENT_LOCATION)=YES`, the product is placed in `$(TARGET_TEMP_DIR)/UninstalledProducts`. |
-|               | * `NO`: The product is placed in `$(DSTROOT)`. |
+|               | * `NO`: The product is placed in [`$(DSTROOT)`](#dstroot). |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Default Value | `NO` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -4975,7 +4975,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(SRCROOT)` |
+| Default Value | [`$(SRCROOT)`](#srcroot) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `/Users/genica/MyProject` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5016,7 +5016,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Boolean |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | Default value will be computed from `$(UNSTRIPPED_PRODUCT)` |
+| Default Value | Default value will be computed from [`$(UNSTRIPPED_PRODUCT)`](#unstripped_product) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 
 ### [$STRIP_INSTALLED_PRODUCT](#strip_installed_product)
@@ -5117,7 +5117,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(DEVELOPER_APPLICATIONS_DIR)` |
+| Default Value | [`$(DEVELOPER_APPLICATIONS_DIR)`](#developer_applications_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Applications` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5127,7 +5127,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(DEVELOPER_BIN_DIR)` |
+| Default Value | [`$(DEVELOPER_BIN_DIR)`](#developer_bin_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `/Applications/Xcode.app/Contents/Developer/usr/bin` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5147,7 +5147,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(DEVELOPER_DIR)` |
+| Default Value | [`$(DEVELOPER_DIR)`](#developer_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `/Applications/Xcode.app/Contents/Developer` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5207,7 +5207,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(DEVELOPER_TOOLS_DIR)` |
+| Default Value | [`$(DEVELOPER_TOOLS_DIR)`](#developer_tools_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `/Applications/Xcode.app/Contents/Developer/Tools` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5237,7 +5237,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(DEVELOPER_USR_DIR)` |
+| Default Value | [`$(DEVELOPER_USR_DIR)`](#developer_usr_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `/Applications/Xcode.app/Contents/Developer/usr` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5279,7 +5279,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$TARGETNAME](#targetname)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Alias of `$(TARGET_NAME)`|
+| Description   | Alias of [`$(TARGET_NAME)`](#target_name)|
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5292,11 +5292,11 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Description   | Identifies the root of the directory hierarchy that contains the product’s files (no intermediate build files). |
 |               | Run Script build phases that operate on product files of the target that defines them should use the value of |
 |               | this build setting. But Run Script build phases that operate on product files of other targets should use |
-|               | `$(BUILT_PRODUCTS_DIR)` instead. |
+|               | [`$(BUILT_PRODUCTS_DIR)`](#built_products_dir) instead. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(CONFIGURATION_BUILD_DIR)` |
+| Default Value | [`$(CONFIGURATION_BUILD_DIR)`](#configuration_build_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `/Users/genica/MyProject/build/build/Debug` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5315,7 +5315,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Identifies the directory containing the target’s intermediate build files. Run Script build phases should place |
-|               | intermediate files at the location indicated by `$(DERIVED_FILE_DIR)`, not the directory identified by this build setting.|
+|               | intermediate files at the location indicated by [`$(DERIVED_FILE_DIR)`](#derived_file_dir), not the directory identified by this build setting.|
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5344,7 +5344,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(TARGET_TEMP_DIR)` |
+| Default Value | [`$(TARGET_TEMP_DIR)`](#target_temp_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5354,7 +5354,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(TEMP_DIR)` |
+| Default Value | [`$(TEMP_DIR)`](#temp_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5364,7 +5364,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(TEMP_DIR)` |
+| Default Value | [`$(TEMP_DIR)`](#temp_dir) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `/Users/genica/MyProject/build/MyProject.build/Debug/MyProject.build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5374,7 +5374,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | Path |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(OBJROOT)` |
+| Default Value | [`$(OBJROOT)`](#objroot) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `/Users/genica/MyProject/build` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5437,7 +5437,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Default Value | `$(USER)` |
+| Default Value | [`$(USER)`](#user) |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Example Value | `genica` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5458,9 +5458,9 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 | Description   | This is a list of paths to folders to be searched by the compiler for included or imported user header files |
 |               | (those headers listed in quotes) when compiling C, Objective-C, C++, or Objective-C++. Paths are delimited by |
 |               | whitespace, so any paths with spaces in them need to be properly quoted. See the description of the |
-|               | `$(ALWAYS_SEARCH_USER_PATHS)` build setting for more details on how this setting is used. If the compiler |
+|               | [`$(ALWAYS_SEARCH_USER_PATHS)`](#always_search_user_paths) build setting for more details on how this setting is used. If the compiler |
 |               | doesn't support the concept of user headers, then the search paths are prepended to the any existing header |
-|               | search paths defined in `$(HEADER_SEARCH_PATHS)`. |
+|               | search paths defined in [`$(HEADER_SEARCH_PATHS)`](#header_search_paths). |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | PathList |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -5514,7 +5514,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Description   | Space-separated list of identifiers. Specifies the architectures for which the binary may be built. During the |
-|               | build, this list is intersected with the value of `$(ARCHS)` build setting; the resulting list specifies the |
+|               | build, this list is intersected with the value of [`$(ARCHS)`](#archs) build setting; the resulting list specifies the |
 |               | architectures the binary can run on. If the resulting architecture list is empty, the target generates no binary. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | StringList |
