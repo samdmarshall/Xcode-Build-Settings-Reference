@@ -2022,7 +2022,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS](#excluded_installsrc_subdirectory_patterns)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | String-separated list of subdirectories to exclude. |
+| Description   | Space-separated list of subdirectories to exclude. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | StringList |
 +---------------+---------------------------------------------------------------------------------------------------------------+
@@ -2032,7 +2032,7 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES](#excluded_recursive_search_path_subdirectories)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | String-separated list of subdirectories to exclude. |
+| Description   | Space-separated list of subdirectories to exclude. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | StringList |
 +---------------+---------------------------------------------------------------------------------------------------------------+
