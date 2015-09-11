@@ -5339,12 +5339,14 @@ All variables are prefixed with "$" to uniquely identify them on this page. [Sub
 ### [$TARGETED_DEVICE_FAMILY](#targeted_device_family)
 
 +---------------+---------------------------------------------------------------------------------------------------------------+
-| Description   | Comma-separated list of numeric identifiers. Specifies the device families on which the product must be capable of running. |
+| Description   | Comma-separated list of numeric identifiers. Specifies the device families on which the product must be capable of running. Note that practically speaking, only the values 1 and 2 can be supplied together in a single build setting, because Watch and TV targets are not allowed to be built as universal binaries. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Type          | String |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Values        | * `1`: iPhone/iPod touch. |
 |               | * `2`: iPad. |
+|               | * `3`: Apple TV. |
+|               | * `4`: Apple Watch. |
 +---------------+---------------------------------------------------------------------------------------------------------------+
 | Default Value | `1` |
 +---------------+---------------------------------------------------------------------------------------------------------------+
